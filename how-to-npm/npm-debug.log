@@ -1,0 +1,47 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'dist-tag',
+1 verbose cli   'add',
+1 verbose cli   '@somallg/testproject@1.0.1',
+1 verbose cli   'test' ]
+2 info using npm@2.13.2
+3 info using node@v0.12.7
+4 verbose node symlink /usr/local/bin/node
+5 verbose dist-tag add test to @somallg/testproject@1.0.1
+6 silly mapToRegistry name @somallg/testproject
+7 silly mapToRegistry scope (from package name) @somallg
+8 verbose mapToRegistry no registry URL found in name for scope @somallg
+9 silly mapToRegistry using default registry
+10 silly mapToRegistry registry http://localhost:15443/
+11 silly mapToRegistry uri http://localhost:15443/@somallg%2ftestproject
+12 verbose request uri http://localhost:15443/-/package/@somallg%2ftestproject/dist-tags
+13 verbose request no auth needed
+14 info attempt registry request try #1 at 23:19:54
+15 verbose request id 0fcd55a3a05ccd7e
+16 http request GET http://localhost:15443/-/package/@somallg%2ftestproject/dist-tags
+17 http 404 http://localhost:15443/-/package/@somallg%2ftestproject/dist-tags
+18 verbose headers { 'content-type': 'application/json',
+18 verbose headers   date: 'Fri, 24 Jul 2015 16:19:54 GMT',
+18 verbose headers   connection: 'keep-alive',
+18 verbose headers   'transfer-encoding': 'chunked' }
+19 verbose stack Error: missing : -/package/@somallg%2ftestproject/dist-tags
+19 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:247:14)
+19 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
+19 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:197:22)
+19 verbose stack     at Request.emit (events.js:110:17)
+19 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1050:14)
+19 verbose stack     at Request.emit (events.js:129:20)
+19 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:996:12)
+19 verbose stack     at IncomingMessage.emit (events.js:129:20)
+19 verbose stack     at _stream_readable.js:908:16
+19 verbose stack     at process._tickCallback (node.js:355:11)
+20 verbose statusCode 404
+21 verbose cwd /Users/somallg/git/nodeschool/how-to-npm
+22 error Darwin 14.4.0
+23 error argv "node" "/usr/local/bin/npm" "dist-tag" "add" "@somallg/testproject@1.0.1" "test"
+24 error node v0.12.7
+25 error npm  v2.13.2
+26 error code E404
+27 error 404 missing : -/package/@somallg%2ftestproject/dist-tags
+28 verbose exit [ 1, true ]
