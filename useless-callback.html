@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Test Suite</title>
+    <title>useless callback</title>
     <script>
+        function useless(callback) {
+            return callback();
+        }
+
         window.onload = function() {
-            assert(true, "The test suite is running");
-            assert(false, "Fail!");
+            var text = 'Domo arigato!';
+            assert(useless(function() { return text; }) === text,
+                    "The useless function works! " + text);
         }
     </script>
 
