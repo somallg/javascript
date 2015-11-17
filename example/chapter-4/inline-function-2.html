@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chirping</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <ul id="results"></ul>
+    <script src="../../js/assert.js"></script>
+    <script>
+
+        var ninja = function myNinja() {
+            assert(ninja === myNinja, 'This function is named two things at once!');
+            console.log(ninja.name);
+            console.log(myNinja.name);
+        };
+
+        ninja();
+
+        assert(typeof myNinja === undefined, 'But myNinja isnt defined outside of the function');
+
+	</script>
+</body>
+</html>

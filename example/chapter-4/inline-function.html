@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chirping</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <ul id="results"></ul>
+    <script src="../../js/assert.js"></script>
+    <script>
+
+        var ninja = {
+            chirp: function signal(n) {
+                return n > 1 ? signal(n - 1) + '-chirp' : 'chirp';
+            }
+        };
+
+        assert(ninja.chirp(3) === 'chirp-chirp-chirp', 'Works as we would expect it to!');
+
+        var samurai = {
+            chirp: ninja.chirp
+        };
+
+        ninja = {};
+
+        try {
+            assert(samurai.chirp(3) === 'chirp-chirp-chirp', 'The method correctly calls itself');
+        } catch (e) {
+            assert(false, 'This isnt good. Where ninja.chirp go?');
+        }
+	</script>
+</body>
+</html>
