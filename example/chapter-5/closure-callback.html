@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>closure callback</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+
+    <div id="testSubject"></div>
+
+    <button id="testButton" type="button">Click me</button>
+
+    <ul id="results"></ul>
+    <script src="../../js/assert.js"></script>
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        $('#testButton').click(function() {
+            var elem$ = $('testSubject');
+
+            elem$.html('Loading...');
+
+            $.ajax({
+                url: 'test.html',
+                success: function(html) {
+                    assert(elem$, 'we can see elem$, via the closure for this callback');
+                    elem$.html(html);
+                }
+            })
+        });
+
+	</script>
+</body>
+</html>
