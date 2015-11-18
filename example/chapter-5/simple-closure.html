@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>not-so-simple closure</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <ul id="results"></ul>
+    <script src="../../js/assert.js"></script>
+    <script>
+
+        var outerValue = 'ninja';
+
+        var later;
+
+        function outerFunction() {
+            var innerValue = 'samurai';
+
+            function innerFunction(paramValue) {
+                assert(outerValue, 'I can see the ninja');
+                assert(innerValue, 'I can see the samurai');
+                assert(paramValue, 'I can see the wakizashi');
+                assert(tooLate, 'I can see the ronin');
+            }
+
+            later = innerFunction;
+        }
+
+        assert(!tooLate, 'Outer cant see the ronin');
+
+        var tooLate = 'ronin';
+
+        outerFunction();
+
+        later('wakizashi');
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variable length</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <ul id="results"></ul>
+    <script src="../../js/assert.js"></script>
+    <script>
+
+        function merge(root) {
+            for (var i = 1; i < arguments.length; i++) {
+                for (var key in arguments[i]) {
+                    root[key] = arguments[i][key];
+                }
+            }
+            return root;
+        }
+
+        var merged = merge({name: 'Batou'}, {city: 'Nihama'});
+
+        assert(merged.name == 'Batou', 'The original name is intact');
+        assert(merged.city == 'Nihama', 'The city is copied over');
+	</script>
+</body>
+</html>
