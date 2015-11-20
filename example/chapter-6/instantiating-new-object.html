@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>instantiation a new object</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <ul id="results"></ul>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        function Ninja() {}
+
+        var ninja = new Ninja();
+
+        var ninja2 = new ninja.constructor();
+
+        assert(ninja2 instanceof Ninja, 'instanceof identifies the constructor');
+
+        assert(ninja2 != ninja, 'Not the same ninja');
+
+	</script>
+</body>
+</html>
