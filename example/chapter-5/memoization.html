@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>memoization</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <ul id="results"></ul>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        Function.prototype.memoized = function(key) {
+            this._values = this._values || {};
+            return this._values[key] !== undefined ?
+                    this._values[key] :
+                    this._values[key] = this.apply(this, arguments);
+        };
+
+        function isPrime(num) {
+            var prime = num != 1;
+            for (var i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    prime = false;
+                    break;
+                }
+            }
+            return prime;
+        }
+
+        assert(isPrime.memoized(5), 'The function work, 5 is prime');
+        assert(isPrime._values[5], 'The answer has been cached');
+
+	</script>
+</body>
+</html>

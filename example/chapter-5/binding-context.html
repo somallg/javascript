@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>binding context</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <button id="test">Click me!</button>
+    <ul id="results"></ul>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        function bind(context, name) {
+            return function() {
+                return context[name].apply(context, arguments);
+            }
+        }
+
+        var button = {
+            clicked: false,
+
+            click: function() {
+                this.clicked = true;
+                assert(button.clicked, 'The button is clicked');
+            }
+        };
+
+        var elem = document.getElementById('test');
+        elem.addEventListener('click', bind(button, 'click'), false);
+
+	</script>
+</body>
+</html>

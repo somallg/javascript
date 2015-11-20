@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function binding</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <button id="test">Click me!</button>
+    <ul id="results"></ul>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        Function.prototype.bind = function() {
+            console.log(arguments);
+            var fn = this, args = Array.prototype.slice.call(arguments),
+                object = args.shift();
+            console.log(args);
+
+            return function() {
+                return fn.apply(object, args.concat(Array.prototype.slice.call(arguments)));
+            };
+        };
+
+        var myObject = {};
+        function myFunction() {
+            return this == myObject;
+        }
+
+        assert(!myFunction(), 'Context is not set');
+
+        var aFunction = myFunction.bind(myObject);
+        assert(aFunction(), 'Context is set properly');
+
+	</script>
+</body>
+</html>

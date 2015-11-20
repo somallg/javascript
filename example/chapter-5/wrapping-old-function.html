@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wrapping old function</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <ul id="results"></ul>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        function wrap(object, method, wrapper) {
+            var fn = object[method];
+
+            return object[method] = function() {
+                return wrapper.apply(this, [fn.bind(this)].concat(Array.prototype.slice.call(arguments)));
+            }
+        }
+
+        if (Prototype.Browser.Opera) {
+            wrap(Element.Methods, 'readAttribute', function(original, elem, attr) {
+                return attr == 'title' ? elem.title : original(elem, attr);
+            });
+        }
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>loops using immediate function</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>DIV 0</div>
+    <div>DIV 1</div>
+    <div>DIV 2</div>
+    <div>DIV 3</div>
+    <ul id="results"></ul>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        var divs = document.getElementsByTagName('div');
+
+        for (var i = 0; i < divs.length; i++) {
+            (function(n) {
+                divs[n].addEventListener('click', function() {
+                    alert('divs #' + n + ' was clicked');
+                }, false);
+            })(i);
+        }
+
+	</script>
+</body>
+</html>
