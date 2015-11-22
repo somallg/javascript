@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6.12 Using hasOwnProperty method</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        Object.prototype.keys = function() {
+            var keys = [];
+            for (var p in this) {
+                if (this.hasOwnProperty(p)) keys.push(p);
+            }
+            return keys;
+        };
+
+        var obj = { a: 1, b: 2, c: 3};
+
+        assert(obj.keys().length == 3, 'There are 3 properties in this object');
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6.19 Fixing things on the caller's behalf</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        function User(first, last) {
+            if (!(this instanceof arguments.callee)) {
+                return new User(first, last);
+            }
+
+            this.name = first + ' ' + last;
+        }
+
+        var name = 'Rukia';
+        var user = User('Ichigo', 'Kurosaki');
+
+        assert(name == 'Rukia', 'Name was set to Rukia');
+        assert(user, 'User instantiated');
+        assert(user.name == 'Ichigo Kurosaki', 'User name correctly assigned');
+
+	</script>
+</body>
+</html>

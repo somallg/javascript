@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6.7 Trying to achieve inheritance with prototypes</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <ul id="results"></ul>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        function Person() {}
+        Person.prototype.dance = function() {};
+
+        function Ninja() {}
+        Ninja.prototype = { dance: Person.prototype.dance };
+
+        var ninja = new Ninja();
+
+        assert(ninja instanceof Ninja, 'ninja receives functionality from Ninja prototype');
+        assert(ninja instanceof Person, '... and the Person prototype');
+        assert(ninja instanceof Object, '... and the Object prototype');
+
+	</script>
+</body>
+</html>
