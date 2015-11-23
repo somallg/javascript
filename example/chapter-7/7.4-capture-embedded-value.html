@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7.4 Capturing an embedded value</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div id="opacity" style="opacity:0.5;filter:alpha(opacity=50);"></div>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        function getOpacity(elem) {
+            var filter = elem.style.filter;
+            return filter ?
+                   filter.indexOf('opacity=') >= 0 ?
+                   (parseFloat(filter.match(/opacity=([^)]+/)[1]) / 100) + '' : '' :
+                   elem.style.opacity;
+        }
+
+        window.onload = function() {
+            assert(getOpacity(document.getElementById('opacity')) == '0.5', 'The opacity of the element has been obtained');
+        }
+
+	</script>
+</body>
+</html>

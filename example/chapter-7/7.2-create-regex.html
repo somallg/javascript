@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7.2 Create a complied regular expression</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        var re1 = /test/i;
+
+        var re2 = new RegExp("test", "i");
+
+        assert(re1.toString() == '/test/i', 'Verify the contents of the expression');
+        assert(re1.test('TesT'), 'Yes, its case-insensitive');
+        assert(re2.test('Test'), 'This one is too');
+
+        assert(re1.toString() == re2.toString(), 'The regular expressions are equal');
+        assert(re1 != re2, 'But they are different objects');
+
+	</script>
+</body>
+</html>
