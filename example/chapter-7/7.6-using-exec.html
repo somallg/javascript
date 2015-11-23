@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7.6 Using exec() method</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        var html = "<div class='test'><b>Hello</b> <i>world!</i></div>";
+
+        var tag = /<(\/?)(\w+)([^>]*?)>/g, match;
+        var num = 0;
+
+        while ((match = tag.exec(html)) !== null) {
+            assert(match.length == 4, 'Every match find each tag and 3 captures');
+            num++;
+        }
+
+        assert(num == 6, '3 opening and 3 closing tags found');
+
+	</script>
+</body>
+</html>

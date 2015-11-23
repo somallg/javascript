@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7.9 Converting a dashed string</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        function upper(all, letter) {
+            return letter.toUpperCase();
+        }
+
+        assert('border-bottom-width'.replace(/-(\w)/g, upper) == 'borderBottomWidth', 'Camel cased a hyphenated string');
+
+	</script>
+</body>
+</html>

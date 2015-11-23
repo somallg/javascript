@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7.7 Using backreferences to match</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        var html = "<b class='hello'>Hello</b> <i>world!</i>";
+
+        var pattern = /<(\w+)([^>]*)>(.*?)<\/\1>/g;
+
+        var match = pattern.exec(html);
+
+        assert(match[0] == "<b class='hello'>Hello</b>", "The entire match");
+        assert(match[1] == 'b', 'The tag name');
+        assert(match[2] == " class='hello'", 'The tag attributes');
+        assert(match[3] == "Hello", 'The content of the tag');
+
+        match = pattern.exec(html);
+
+        assert(match[0] == "<i>world!</i>", "The entire match");
+        assert(match[1] == 'i', 'The tag name');
+        assert(match[2] == "", 'The tag attributes');
+        assert(match[3] == "world!", 'The content of the tag');
+
+	</script>
+</body>
+</html>

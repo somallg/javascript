@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7.10 Technique for compressing a query string</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        function compress(source) {
+            var keys = {};
+
+            source.replace(/([^=&]+)=([^&]*)/g,
+            function(full, key, value) {
+                keys[key] = (keys[key] ? keys[key] + ',' : '') + value;
+                return '';
+            });
+
+            var result = [];
+
+            for (var key in keys) {
+                result.push(key + '=' + keys[key]);
+            }
+
+            return result.join('&');
+        }
+
+        assert(compress('foo=1&foo=2&blah=a&blah=b&foo=3') == 'foo=1,2,3&blah=a,b', 'Compression is OK');
+
+	</script>
+</body>
+</html>

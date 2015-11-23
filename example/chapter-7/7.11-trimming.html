@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7.11 Trimming string</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        function trim(str) {
+            return (str || '').replace(/^\s+|\s+$/g, '');
+        }
+
+        function trim2(str) {
+            return str.replace(/^\s\s*/, '')
+                      .replace(/\s\s*$/, '');
+        }
+
+        assert(trim(' #id div.class ') == '#id div.class', 'Extra whitespace trimmed');
+
+        assert(trim2(' #id div.class ') == '#id div.class', '2 Extra whitespace trimmed');
+
+	</script>
+</body>
+</html>
