@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7.15 Matching unicode characters</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        var pattern = /^((\w+)|(\\.))+$/;
+
+        var tests = [
+                "formUpdate",
+                "form\\.update\\.whatever",
+                "form\\:update",
+                "\\f\\o\\r\\m\\u\\p\\d\\a\\t\\e",
+                "form:update"
+        ];
+
+        for (var n = 0; n < tests.length; n++) {
+            assert(pattern.test(tests[n]), tests[n] + " is a valid identifier");
+        }
+
+	</script>
+</body>
+</html>
