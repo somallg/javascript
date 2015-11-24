@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8.1 Two ways to create repeating timers</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        setTimeout(function repeatMe() {
+            setTimeout(repeatMe, 10);
+        }, 10);
+
+        setInterval(function() {
+
+        }, 10);
+
+	</script>
+</body>
+</html>
