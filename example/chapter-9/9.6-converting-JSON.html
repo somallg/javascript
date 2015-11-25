@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9.5 Function for finding argument names</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        var json = '{"name": "Ninja"}';
+
+        var object = eval('(' + json + ')');
+
+        assert(object.name === 'Ninja', 'my name is Ninja');
+
+	</script>
+</body>
+</html>

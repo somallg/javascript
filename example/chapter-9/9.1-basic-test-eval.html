@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9.1 Basic test of eval() method</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        assert(eval('5 + 5') === 10, '5 and 5 is 10');
+        assert(eval('var ninja = 5;') === undefined, 'no value returned');
+        assert(ninja === 5, 'The variable ninja was created');
+
+        (function() {
+            eval('var ninja = 6;');
+            assert(ninja === 6, 'evaluated within the current scope');
+        })();
+
+        assert(window.ninja === 5, 'global scope is unaffected');
+
+        assert(ninja === 5, 'global scope is unaffected');
+
+	</script>
+</body>
+</html>

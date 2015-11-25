@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9.4 Decompiling function</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        function test(a) { return a + a; }
+
+        assert(test.toString() == 'function test(a) { return a + a; }', 'Function decomplied');
+
+	</script>
+</body>
+</html>
