@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10.1 Creating a with scope using object</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        var katana = {
+            isSharp: true,
+            use: function() {
+                this.isSharp = !this.isSharp;
+            }
+        };
+
+        with (katana) {
+            isSharp = false;
+            assert(katana.isSharp === false, 'properties can be assigned');
+
+            cut = function() {
+                isSharp = false;
+            };
+        }
+
+        assert(typeof katana.cut == 'function', 'new properties can be created on the scoped object');
+        assert(typeof window.cut == 'function', 'new properties are created in the global scope');
+
+	</script>
+</body>
+</html>

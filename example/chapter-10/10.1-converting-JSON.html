@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10.1 Creating a with scope using object</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        var use = 'other';
+
+        var katana = {
+            isSharp: true,
+            use: function() {
+                this.isSharp = !this.isSharp;
+            }
+        };
+
+        with (katana) {
+            assert(use !== 'other' && typeof use == 'function', 'use is a function from the object');
+            assert(this !== katana, 'context isnt changed');
+        }
+
+        assert(use === 'other', 'outside the with use is unaffected');
+        assert(typeof isSharp === 'undefined', 'outside of with the properties doesnt exists');
+
+	</script>
+</body>
+</html>
