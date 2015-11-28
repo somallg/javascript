@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12.1 Accessing attribute values via DOM</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div></div>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        window.onload = function() {
+            var div = document.getElementsByTagName('div')[0];
+
+            div.setAttribute('id', 'ninja-1');
+            assert(div.getAttribute('id') === 'ninja-1', 'Attribute successfully change');
+
+            div.id = 'ninja-2';
+            assert(div.id === 'ninja-2', 'Property successfully changed');
+
+            div.id = 'ninja-3';
+            assert(div.id === 'ninja-3', 'Property changed');
+            assert(div.getAttribute('id') === 'ninja-3', 'Attribute changed via property');
+
+            div.setAttribute('id', 'ninja-4');
+            assert(div.id === 'ninja-4', 'Property changed via attribute');
+            assert(div.getAttribute('id') === 'ninja-4', 'Attribute changed');
+        }
+
+	</script>
+</body>
+</html>
