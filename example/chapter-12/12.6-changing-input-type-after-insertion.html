@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12.6 Changing input type after insertion</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+<form action="/" id="testForm"></form>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        window.onload = function() {
+            var input = document.createElement('input');
+
+            input.type = 'text';
+            assert(input.type == 'text', 'input type is text');
+
+            document.getElementById('testForm').appendChild(input);
+
+            input.type = 'hidden';
+            assert(input.type == 'hidden', 'input type changed to hidden');
+        }
+
+	</script>
+</body>
+</html>

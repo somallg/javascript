@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13.1 Providing proper context when binding event handlers</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div>Hello</div>
+    <div>Hello</div>
+    <div>Hello</div>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        if (document.addEventListener) {
+            this.addEvent = function(elem, type, fn) {
+                elem.addEventListener(type, fn, false);
+                return fn;
+            };
+
+            this.removeEvent = function(elem, type, fn) {
+                elem.removeEventListener(type, fn, false);
+            };
+        } else if (document.attachEvent) {
+            this.addEvent = function(elem, type, fn) {
+                var bound = function() {
+                    return fn.apply(elem, arguments);
+                };
+                elem.attachEvent('on' + type, bound);
+                return bound;
+            };
+
+            this.removeEvent = function(elem, type, fn) {
+                elem.detachEvent('on' + type, fn);
+            };
+        }
+
+        addEvent(window, 'load', function() {
+            var elems = document.getElementsByTagName('div');
+
+            for (var i = 0; i < elems.length - 1; i++) {
+                (function(elem) {
+                    var handler = addEvent(elem, 'click', function() {
+                        this.style.backgroundColor = this.style.backgroundColor == '' ? 'green' : '';
+                        removeEvent(elem, 'click', handler);
+                    });
+                })(elems[i]);
+            }
+        });
+
+	</script>
+</body>
+</html>

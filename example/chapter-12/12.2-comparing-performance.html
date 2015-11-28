@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12.2 Comparing performance of DOM methods vs properties</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div id="testSubject"></div>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        var count = 5000000;
+        var n;
+        var begin = new Date().getTime();
+        var end;
+        var testSubject = document.getElementById('testSubject');
+        var value;
+
+        for (n = 0; n < count; n++) {
+            value = testSubject.getAttribute('id');
+        }
+        end = new Date().getTime();
+        assert(true, 'Time for DOM method read: ' + (end - begin));
+
+        begin = new Date().getTime();
+        for (n = 0; n < count; n++) {
+            value = testSubject.id;
+        }
+        end = new Date().getTime();
+        assert(true, 'Time for property read: ' + (end - begin));
+
+
+        begin = new Date().getTime();
+        for (n = 0; n < count; n++) {
+            testSubject.setAttribute('id', 'testSubject');
+        }
+        end = new Date().getTime();
+        assert(true, 'Time for DOM method write: ' + (end - begin));
+
+        begin = new Date().getTime();
+        for (n = 0; n < count; n++) {
+            testSubject.id = 'testSubject';
+        }
+        end = new Date().getTime();
+        assert(true, 'Time for property write: ' + (end - begin));
+	</script>
+</body>
+</html>

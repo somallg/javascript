@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12.9 Grabbing dimensions of hidden elements</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Suspendisse congue facilisis dignissim. Fusce sodales,
+        odio commodo accumsan commodo, lacus odio aliquet purus,
+        <img src="../images/ninja-with-pole.png" id="withPole" />
+        <img src="../images/ninja-with-shuriken.png"
+             id="withShuriken" style="display:none" />
+        vel rhoncus elit sem quis libero. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. Donec adipiscing urna ut nibh vestibulum vitae mattis leo rutrum. Etiam a lectus ut nunc mattis laoreet at placerat nulla. Aenean tincidunt lorem eu dolor commodo ornare.
+    </div>
+
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        (function() {
+           var PROPERTIES = {
+               position: 'absolute',
+               visibility: 'hidden',
+               display: 'block'
+           } ;
+
+            window.getDimensions = function(element) {
+                var previous = {};
+                for (var key in PROPERTIES) {
+                    previous[key] = element.style[key];
+                    element.style[key] = PROPERTIES[key];
+                }
+
+                var result = {
+                    width: element.offsetWidth,
+                    height: element.offsetHeight
+                };
+
+                for (key in PROPERTIES) {
+                    element.style[key] = previous[key];
+                }
+            };
+        })();
+
+        window.onload = function() {
+            var withPole = document.getElementById('withPole');
+            var withShuriken = document.getElementById('withShuriken');
+
+            assert(withPole.offsetWidth == 41, 'Pole image width fetched')
+        }
+
+	</script>
+</body>
+</html>

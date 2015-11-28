@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12.4 Demonstrating how browsers strong-arm form elements</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <form action="/" id="testForm">
+        <input type="text" id="id"/>
+        <input type="text" name="action"/>
+    </form>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        window.onload = function() {
+            var form = document.getElementById('testForm');
+
+            assert(form.id === 'testForm', 'the id property is untouched');
+            assert(form.action === '/', 'the action property is untouched');
+
+            console.log(form.id, form.action);
+
+            assert(form.getAttribute('id') === 'testForm', 'the id attribute is untouched');
+            assert(form.getAttribute('action') === '/', 'the action attribute is untouched');
+        }
+
+	</script>
+</body>
+</html>
