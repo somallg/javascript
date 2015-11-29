@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>14.2 Generating a list of DOM nodes</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        function getNodes(htmlString, doc) {
+            var map = {
+                "<td": [3, "<table><tbody><tr>", "</tr></tbody></table>"],
+                "<th": [3, "<table><tbody><tr>", "</tr></tbody></table>"],
+                "<tr": [2, "<table><thead>", "</thead></table>"],
+                "<option": [1, "select multiple='multiple'>", "</select>"],
+                "<optgroup": [1, "select multipe='multiple'>", "</select>"],
+                "<legend": [1, "<fieldset>", "</fieldset>"],
+                "<thead": [1, "<table>", "</table>"],
+                "<tbody": [1, "<table>", "</table>"],
+                "<tfoot": [1, "<table>", "</table>"],
+                "<colgroup": [1, "<table>", "</table>"],
+                "<caption": [1, "<table>", "</table>"],
+                "<col": [2, "<table><tbody></tbody><colgroup>", "</colgroup></table>"],
+                "<link": [3, "<div></div><div>", "</div>"]
+            };
+
+            var tagName = htmlString.match(/<\w+/),
+                    mapEntry = tagName ? map[tagName[0]] : null;
+            if (!mapEntry) mapEntry = [0, " ", " "];
+
+            var div = (doc || document).createElement('div');
+
+            div.innerHTML = mapEntry[1] + htmlString + mapEntry[2];
+
+            while (mapEntry[0]--) div = div.lastChild;
+
+            return div.childNodes;
+        }
+
+        assert(getNodes("<td>test</td><td>test2</td>").length == 2, 'Get 2 nodes back from the method');
+        assert(getNodes("<td>test</td>")[0].nodeName == "TD", 'Verify that we are getting the right node');
+
+	</script>
+</body>
+</html>

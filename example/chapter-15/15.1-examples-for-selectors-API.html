@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15.1 Examples of Selectors API</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div id="test">
+        <b>Hello</b>, I'm a ninja!
+    </div>
+    <div id="test2"></div>
+
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        var divs = document.querySelectorAll("body > div");
+
+        assert(divs.length === 3, '3 divs found using CSS selector');
+
+        var b = document.getElementById('test').querySelector('b:only-child');
+        assert(b, 'The bold element was found');
+
+	</script>
+</body>
+</html>

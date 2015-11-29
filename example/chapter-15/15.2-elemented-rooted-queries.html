@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15.2 Element-rooted queries</title>
+    <link rel="stylesheet" href="../../css/style.css"/>
+</head>
+<body>
+    <div id="test">
+        <b>Hello</b>, I'm a ninja!
+    </div>
+    <div id="test2"></div>
+
+    <div id="results"></div>
+    <script src="../../js/assert.js"></script>
+    <script type="text/javascript">
+
+        window.onload = function() {
+            var b = document.getElementById('test').querySelector('div b');
+
+            assert(b, 'Only the last part of the selector matters');
+        }
+
+
+	</script>
+</body>
+</html>
