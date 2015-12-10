@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Vampiresss</title>
+</head>
+<body>
+
+<button id="all-vampires">All Vampires</button>
+<button id="vampire">One Vampire</button>
+<button id="all-ghouls">All Ghouls</button>
+<button id="ghoul">One Ghoul</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+
+        console.log("js working");
+
+        var $vampires = $('#all-vampires');
+        var $vampire = $('#vampire');
+        var $ghouls = $('#all-ghouls');
+        var $ghoul = $('#ghoul');
+        var $body = $('body');
+
+// buttons ------------------------------------
+        $vampires.click(function() {
+            console.log("button clicked");
+            $.ajax({
+                url: 'http://localhost:3000/vampires'
+            }). done(function (data) {
+                console.log("getting /vampires");
+                console.log(data);
+                $body.append("<h3>"+ JSON.stringify(data[0]) +"</h3");
+            });
+        });
+    });
+</script>
+</body>
+</html>
