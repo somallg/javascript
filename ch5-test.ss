@@ -9,3 +9,16 @@
 
 ; test occur*
 (let ([a 'banana][l '((banana) (split ((((banana ice))) (cream (banana)) sherbet)) (banana) (bread) (banana brandy))]) (occur* a l))
+
+; test subst*
+(let ([new 'orange][old 'banana][l '((banana) (split ((((banana ice))) (cream (banana)) sherbet)) (banana) (bread) (banana brandy))]) (subst* new old l))
+
+; test insertL*
+(let ([new 'pecker][old 'chuck][l '((how much (wood)) could ((a (wood) chuck)) (((chuck))) (if (a) ((wood chuck))) could chuck wood)]) (insertL* new old l))
+
+; test member*
+(let ([a 'chips][l '((potato) (chips ((with) fish) (chips)))]) (member* a l))
+
+; test leftmost
+(let ([l '((potato) (chips ((with) fish) (chips)))]) (leftmost l))
+(let ([l '(((hot) (tuna (and))) cheese)]) (leftmost l))
