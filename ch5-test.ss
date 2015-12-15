@@ -22,3 +22,11 @@
 ; test leftmost
 (let ([l '((potato) (chips ((with) fish) (chips)))]) (leftmost l))
 (let ([l '(((hot) (tuna (and))) cheese)]) (leftmost l))
+
+; test eqlist?
+(let ([l1 '(strawberry ice scream)][l2 '(strawberry ice scream)]) (eqlist? l1 l2))
+(let ([l1 '(strawberry ice scream)][l2 '(strawberry scream ice)]) (eqlist? l1 l2))
+(let ([l1 '(banana ((split)))][l2 '((banana) (split))]) (eqlist? l1 l2))
+(let ([l1 '(beef ((sausage)) (and (soda)))][l2 '(beef ((salami)) (and (soda)))]) (eqlist? l1 l2))
+(let ([l1 '(beef ((sausage)) (and (soda)))][l2 '(beef ((sausage)) (and (soda)))]) (eqlist? l1 l2))
+
