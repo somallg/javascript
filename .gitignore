@@ -1,3 +1,14 @@
-.idea
-node_modules
-bower_components
+.DS_Store
+/.idea
+/.settings
+/target
+/.classpath
+/.project
+simplesite.iml
+/build/
+*.war
+npm-debug.log
+node_modules/.bin
+node_modules/*
+public/js/vendor
+public/vendor

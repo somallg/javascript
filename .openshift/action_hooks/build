@@ -1,0 +1,5 @@
+#!/bin/bash
+set -x
+
+cd $OPENSHIFT_REPO_DIR
+HOME=$OPENSHIFT_DATA_DIR bower install

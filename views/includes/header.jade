@@ -1,0 +1,25 @@
+nav.navbar.navbar-custom.navbar-fixed-top(role='navigation')
+    .container
+        .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-main-collapse')
+                i.fa.fa-bars
+            a.navbar-brand.page-scroll(href='#/')
+                span.light Somallg
+                | &nbsp;Simple Site
+
+        .collapse.navbar-collapse.navbar-right.navbar-main-collapse
+            ul.nav.navbar-nav
+                li.hidden
+                    a(href='#page-top')
+                li
+                    a.page-scroll(href='#/1')
+                        i.glyphicon.glyphicon-info-sign
+                        | &nbsp;About
+                li
+                    a.page-scroll(href='#/2')
+                        i.glyphicon.glyphicon-flash
+                        | &nbsp;Skills
+                li
+                    a.page-scroll(href='#/3')
+                        i.glyphicon.glyphicon-phone-alt
+                        | &nbsp;Contact

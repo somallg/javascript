@@ -1,0 +1,11 @@
+doctype html
+html
+    include includes/head
+    body
+        block content
+
+        include includes/footer
+
+        script(data-main='/js/main', src='/vendor/requirejs/require.js')
+
+        block js
