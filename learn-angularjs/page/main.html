@@ -1,5 +1,11 @@
 <h1>This is main</h1>
 <hr/>
 <label>
-    <input type="text" ng-model="name">
+    <input type="text" ng-model="name" ng-init="name = 'John Snow'" />
 </label>
+<h3>Search Results</h3>
+<div class="list-group">
+    <search-result person-object="person" formatted-address="formattedAddress(aperson)" ng-repeat="person in people">
+        * search result may not be valid
+    </search-result>
+</div>
