@@ -16,7 +16,6 @@ app/tests/coverage/
 .idea/
 coverage/
 bower_components
-my-reddit/www/lib
 
 # MEAN.js app and assets
 # ======================
