@@ -40,6 +40,21 @@
         save: function (note) {
           notes.push(note);
           persist();
+        },
+
+        remove: function (noteId) {
+          notes.forEach(function (item, index) {
+            if (item.id === noteId) {
+              notes.splice(index, 1);
+              persist();
+            }
+          });
+        },
+
+        move: function (note, fromIndex, toIndex) {
+          notes.splice(fromIndex, 1);
+          notes.splice(toIndex, 0, note);
+          persist();
         }
       };
     }]);

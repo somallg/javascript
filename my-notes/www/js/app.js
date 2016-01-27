@@ -12,7 +12,8 @@
     .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
       $stateProvider.state('list', {
         url: '/list',
-        templateUrl: 'templates/list.html'
+        templateUrl: 'templates/list.html',
+        controller: 'ListCtrl'
       });
 
       $stateProvider.state('edit', {
@@ -31,7 +32,16 @@
     }])
 
     .controller('ListCtrl', ['$scope', 'NoteStore', function ($scope, NoteStore) {
+      $scope.reordering = false;
       $scope.notes = NoteStore.get();
+
+      $scope.remove = NoteStore.remove;
+
+      $scope.move = NoteStore.move;
+
+      $scope.toggleReordering = function () {
+        $scope.reordering = !$scope.reordering;
+      };
     }])
 
     .controller('EditCtrl', ['$scope', '$state', 'NoteStore', function ($scope, $state, NoteStore) {
