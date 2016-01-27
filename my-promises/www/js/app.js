@@ -26,12 +26,19 @@
 
       var startTime = Date.now();
 
-      add(5, 2)
+      var p = add(5, -12)
         .then(function (res) {
-          return add(res, 3);
         })
         .then(function (res) {
           return add(res, 1);
+        }, function (err) {
+          return add(1, 2);
+        })
+        .then(function (res) {
+          return res + 100;
+        })
+        .then(function (res) {
+          return res * 100;
         })
         .then(function (res) {
           $scope.result = res;
