@@ -10,7 +10,7 @@ simplesite.iml
 npm-debug.log
 node_modules/.bin
 node_modules/*
-public/js/vendor
-public/vendor
+public/dist
+public/lib
 my-reddit
 my-notes
