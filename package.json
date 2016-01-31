@@ -23,13 +23,60 @@
     "npm": ">= 1.0.0"
   },
   "dependencies": {
+    "animate.css": "^3.4.0",
+    "bootstrap": "^3.3.6",
     "express": "^4.13.1",
+    "font-awesome": "^4.5.0",
     "jade": "^1.11.0",
+    "jquery": "^2.2.0",
+    "jquery.terminal": "^0.9.3",
     "morgan": "^1.6.1",
-    "serve-favicon": "^2.3.0"
+    "reveal.js": "^3.2.0",
+    "serve-favicon": "^2.3.0",
+    "underscore": "^1.8.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "clean-css": "^3.4.9",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^4.0.1",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "node-sass": "^3.4.2",
+    "uglifyjs": "^2.4.10",
+    "watchify": "^3.7.0"
+  },
   "bundleDependencies": [],
   "private": true,
-  "main": "server.js"
+  "main": "server.js",
+  "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.min.js",
+    "bootstrap": "./node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js",
+    "jquery.terminal": "./node_modules/jquery.terminal/js/jquery.terminal-min.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "bootstrap": {
+      "depends": [
+        "jquery:jQuery"
+      ]
+    }
+  },
+  "scripts": {
+    "copy-fa-fonts": "cp -r node_modules/font-awesome/fonts public/dist",
+    "copy-bootstrap-fonts": "cp -r node_modules/bootstrap-sass/assets/fonts/bootstrap public/dist/fonts",
+    "copy-reveal.js-fonts": "mkdir -p public/lib && cp -r node_modules/reveal.js/lib/font public/lib",
+    "build-dev": "npm run build-js && npm run build-sass",
+    "build-prod": "npm run build-min-js && npm run build-min-sass",
+    "build-js": "browserify public/js/app.js -o public/dist/js/app.js",
+    "build-min-js": "browserify public/js/app.js | uglifyjs -o public/dist/js/app.min.js",
+    "build-sass": "node-sass public/sass/main.scss public/dist/css/main.css",
+    "build-min-sass": "node-sass public/sass/main.scss | cleancss -so public/dist/css/main.min.css",
+    "watch-js": "nodemon -e js -w public/js -x 'npm run build-js'",
+    "watch-sass": "nodemon -e scss -w public/sass -x 'npm run build-sass'"
+  }
 }

@@ -12,3 +12,5 @@ node_modules/.bin
 node_modules/*
 public/js/vendor
 public/vendor
+my-reddit
+my-notes

@@ -1,12 +1,12 @@
 extends layout
 
 block content
-    .container.content-section.text-center
-        if error.status
-            h2= error.status
-        if message
-            h1= message
-        if error.stack
-            pre
-                div#terminal
-            div.hidden#error #{error.stack}
+  .container.content-section.text-center
+    if error.status
+      h2= error.status
+    if message
+      h1= message
+    if error.stack
+      pre
+        div#terminal
+      div.hidden#error #{error.stack}

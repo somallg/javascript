@@ -1,11 +1,11 @@
 doctype html
 html
-    include includes/head
-    body
-        block content
+  include includes/head
+  body
+    block content
 
-        include includes/footer
+    include includes/footer
 
-        script(data-main='/js/main', src='/vendor/requirejs/require.js')
+    script(src='/dist/js/app.min.js')
 
-        block js
+    block js

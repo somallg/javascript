@@ -1,29 +1,36 @@
-define(['jquery', 'reveal', 'bootstrap', 'jquery.terminal'], function ($, Reveal) {
-    // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click(function () {
-        $('.navbar-toggle:visible').click();
-    });
+'use strict';
 
-    var terminal$ = $('#terminal');
-    var error$    = $('#error');
-    var enableKeyboard = true;
+var jquery = require('jquery');
+var Reveal = require('reveal.js');
+require('bootstrap');
+require('jquery.terminal');
 
-    if (terminal$ && terminal$.length > 0) {
-        enableKeyboard = false;
-        terminal$.terminal(function(command, term) {
-            if (command === 'print') {
-                term.echo(error$.text());
-            } else {
-                term.echo('Unknow command');
-            }
-        }, { prompt: '$ ', name: 'test', greetings: 'Type "print" to print stack trace'});
-    }
+jquery(function ($, undefined) {
+  // Closes the Responsive Menu on Menu Item Click
+  $('.navbar-collapse ul li a').click(function () {
+    $('.navbar-toggle:visible').click();
+  });
 
-    Reveal.initialize({
-        history: true,
+  var terminal$ = $('#terminal');
+  var error$ = $('#error');
+  var enableKeyboard = true;
 
-        keyboard: enableKeyboard,
+  if (terminal$ && terminal$.length > 0) {
+    enableKeyboard = false;
+    terminal$.terminal(function (command, term) {
+      if (command === 'print') {
+        term.echo(error$.text());
+      } else {
+        term.echo('Unknow command');
+      }
+    }, {prompt: '$ ', name: 'test', greetings: 'Type "print" to print stack trace'});
+  }
 
-        transition: 'convex'
-    });
+  Reveal.initialize({
+    history: true,
+
+    keyboard: enableKeyboard,
+
+    transition: 'convex'
+  });
 });
