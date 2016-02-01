@@ -1,1 +1,2 @@
-# javascript
+# Understand Javascript: The Weird parts
+====
