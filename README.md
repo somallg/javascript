@@ -1,9 +1,8 @@
-# nodejs
+# Revealjs
 =======
 The OpenShift `nodejs` cartridge documentation can be found at:
 
 http://openshift.github.io/documentation/oo_cartridge_guide.html#nodejs
 
-* Demo site: http://nodejs-somallg.rhcloud.com
-
-* Merge from master
+* Simple site using Revealjs (http://lab.hakim.se/reveal-js/)
+* Demo site: http://revealjs-somallg.rhcloud.com
