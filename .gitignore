@@ -73,3 +73,6 @@ mongod
 *.ntvs*
 *.njsproj
 *.sln
+
+public/dist
+public/lib

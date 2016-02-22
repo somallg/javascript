@@ -1,28 +1,35 @@
-# Everything related to javascript technologies
+# Modern React with Redux
 ====
 
-* AngularJS - Superheroic JavScript MVW Framework
-    * [Angular-Meteor](https://github.com/somallg/javascript/tree/angular-meteor)
-    * [AngularJS Tutorial Build a Gmail clone](https://github.com/somallg/javascript/tree/angularjs-tutorial-build-a-gmail-clone)
-    * [AngularJS official tutorital](https://github.com/somallg/javascript/tree/angularjs)
+# 1 - An Intro to React
 
-* Ionic - Advanced HTML5 Hybrid Mobile App Framework
-    * [Ionic by example](https://github.com/somallg/javascript/tree/ionic-by-example)
+## 1.1 Introduction - Github Links for Project Files!
+* Email: ste.grinder@gmail.co
+* Twitter: @sg_in_sf_
+* github.com/stephengrider
 
-* Books & Courses
-    * [Javascript: The Good Parts](https://github.com/somallg/javascript/tree/javascript-the-good-parts)
-    * [NodeSchool](https://github.com/somallg/javascript/tree/nodeschool)
-    * [Secrets of the JavaScript Ninja](https://github.com/somallg/javascript/tree/secrets-of-the-javascript-ninja)
-    * [Understand JavaScript](https://github.com/somallg/javascript/tree/understand-javascript)
+## 1.2 Completed Projects - Github Links
+* https://github.com/StephenGrider/ReduxCasts
 
-* KeystoneJS - Node.js cms and web application platform built on Express and MongoDB
-    * [keystonejs](https://github.com/somallg/javascript/tree/keystonejs)
+## 1.3 The Purpose of Boilerplate Projects
 
-* MEAN.JS - Full-Stack Javascript Using MongoDB, Expresss, AngularJS, and Node.js
-    * [meanjs](https://github.com/somallg/javascript/tree/meanjs)
+## 1.4 Environment Setup
+* `npm install`
 
-* MeteorJS - Open-source platform for building top-quality web apps in a fraction of the time
-    * [meteorjs](https://github.com/somallg/javascript/tree/meteorjs)
+## 1.5 Project Setup
 
-* RevealJS - The HTML Presentation Framework
-    * [revealjs](https://github.com/somallg/javascript/tree/revealjs)
+## 1.6 A Taste of JSX
+
+## 1.7 More on JSX
+
+## 1.8 ES6 import Statements
+
+## 1.9 ReactDOM vs React
+
+## 1.10 Differences Between Component Instances and Component Classes
+
+## 1.11 Render Targets
+
+## 1.12 Component Structure
+
+## 1.13 Youtube Search API Signup
