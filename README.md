@@ -33,3 +33,14 @@
 ## 1.12 Component Structure
 
 ## 1.13 Youtube Search API Signup
+* Go to `https://console.developers.google.com`
+* Enable **Youtube API v3**
+* Create credentials => API Key => Browser Key
+* `npm install youtube-api-search`
+
+## 1.14 Export Statements
+* `export default Abc` 
+
+## 1.15 Class-Based Components
+* Functional components
+* Class components
