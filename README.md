@@ -1,28 +1,27 @@
-# Everything related to javascript technologies
-====
+# Learn and Understand NodeJS
 
-* AngularJS - Superheroic JavScript MVW Framework
-    * [Angular-Meteor](https://github.com/somallg/javascript/tree/angular-meteor)
-    * [AngularJS Tutorial Build a Gmail clone](https://github.com/somallg/javascript/tree/angularjs-tutorial-build-a-gmail-clone)
-    * [AngularJS official tutorital](https://github.com/somallg/javascript/tree/angularjs)
+# 1. Introduction and Setup
 
-* Ionic - Advanced HTML5 Hybrid Mobile App Framework
-    * [Ionic by example](https://github.com/somallg/javascript/tree/ionic-by-example)
+## 1.1 Introduction and the Goal of this Course
+* Don't imitate, understand
 
-* Books & Courses
-    * [Javascript: The Good Parts](https://github.com/somallg/javascript/tree/javascript-the-good-parts)
-    * [NodeSchool](https://github.com/somallg/javascript/tree/nodeschool)
-    * [Secrets of the JavaScript Ninja](https://github.com/somallg/javascript/tree/secrets-of-the-javascript-ninja)
-    * [Understand JavaScript](https://github.com/somallg/javascript/tree/understand-javascript)
+# 1.2 Big Words and NodeJS
 
-* KeystoneJS - Node.js cms and web application platform built on Express and MongoDB
-    * [keystonejs](https://github.com/somallg/javascript/tree/keystonejs)
+# 1.3 Watching this Course in High Definition
 
-* MEAN.JS - Full-Stack Javascript Using MongoDB, Expresss, AngularJS, and Node.js
-    * [meanjs](https://github.com/somallg/javascript/tree/meanjs)
+# 1.4 Conceptual Aside: The Command Line Interface
+* CLI : utility to type command to your computer rather than clicking
+    * Bash on Linux
+    * Terminal on Mac
+    * Command Prompt on Windows
+    
+# 1.5 Command Line References
 
-* MeteorJS - Open-source platform for building top-quality web apps in a fraction of the time
-    * [meteorjs](https://github.com/somallg/javascript/tree/meteorjs)
+# 2. V8: The Javascript Engine
 
-* RevealJS - The HTML Presentation Framework
-    * [revealjs](https://github.com/somallg/javascript/tree/revealjs)
+## 2.1 Conceptual Aside: Processors, Machine Language, and C++
+* Machine Code: programming languages spoken by computer processors
+* Node is written in C++
+* V8 is written in C++
+
+## 2.2 Javascript Aside: Javscript Engines and the ECMAScript Specification
