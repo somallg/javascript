@@ -24,4 +24,30 @@
 * Node is written in C++
 * V8 is written in C++
 
-## 2.2 Javascript Aside: Javscript Engines and the ECMAScript Specification
+## 2.2 Javascript Aside: Javascript Engines and the ECMAScript Specification
+* ECMAScript: the standard Javascript is based on
+* Javascript Engine: a program that converts Javascript code into something the computer processor can understand
+
+## 2.3 V8 Under the Hood
+
+## 2.4 Adding Features to JavaScript
+
+# 3. The Node Core
+
+## 3.1 Conceptual Aside: Servers and Clients
+* Servers: computer performs services
+* Clients: asks for services
+* Request/Response model
+
+## 3.2 What Does Javascript Need to Manage a Server?
+* Better ways to organize our code into reusable pieces
+* Ways to deal with files
+* Ways to deal with databases
+* The ability to communicate over the Internet
+* The ability to accept requests and send responses (in the standard format)
+* A way to deal with work that takes a long time
+
+## 3.3 The C++ Core
+
+## 3.4 The Javascript Core
+* 
