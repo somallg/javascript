@@ -1,6 +1,6 @@
 # Learn and Understand NodeJS
 
-# 1. Introduction and Setup
+# Section 1. Introduction and Setup
 
 ## 1.1 Introduction and the Goal of this Course
 * Don't imitate, understand
@@ -17,29 +17,29 @@
     
 # 1.5 Command Line References
 
-# 2. V8: The Javascript Engine
+# Section 2. V8: The Javascript Engine
 
-## 2.1 Conceptual Aside: Processors, Machine Language, and C++
+## 2.6 Conceptual Aside: Processors, Machine Language, and C++
 * Machine Code: programming languages spoken by computer processors
 * Node is written in C++
 * V8 is written in C++
 
-## 2.2 Javascript Aside: Javascript Engines and the ECMAScript Specification
+## 2.7 Javascript Aside: Javascript Engines and the ECMAScript Specification
 * ECMAScript: the standard Javascript is based on
 * Javascript Engine: a program that converts Javascript code into something the computer processor can understand
 
-## 2.3 V8 Under the Hood
+## 2.8 V8 Under the Hood
 
-## 2.4 Adding Features to JavaScript
+## 2.9 Adding Features to JavaScript
 
-# 3. The Node Core
+# Section 3. The Node Core
 
-## 3.1 Conceptual Aside: Servers and Clients
+## 3.10 Conceptual Aside: Servers and Clients
 * Servers: computer performs services
 * Clients: asks for services
 * Request/Response model
 
-## 3.2 What Does Javascript Need to Manage a Server?
+## 3.11 What Does Javascript Need to Manage a Server?
 * Better ways to organize our code into reusable pieces
 * Ways to deal with files
 * Ways to deal with databases
@@ -47,7 +47,32 @@
 * The ability to accept requests and send responses (in the standard format)
 * A way to deal with work that takes a long time
 
-## 3.3 The C++ Core
+## 3.12 The C++ Core
 
-## 3.4 The Javascript Core
-* 
+## 3.13 The Javascript Core
+
+## 3.14 Downloading Lecture Source Code
+
+## 3.15 Let's Install and Run Some Javascript in Node
+* Breakpoint: a spot in our code where we tell a debugging tool to pause the execution of our code
+
+# Section 4. Modules, Exports, and Require
+
+## 4.16 Conceptual Asides: Modules
+* Module: a reusable block of code whose existence does not accidentally impact other code 
+* CommonJS modules: an agreed upon standard for how code modules should be structured
+
+## 4.17 Javascript Aside: First-Class Functions and Function Expressions
+* First-Class Functions: everything you can do with other types you can do with functions
+* An Expression: a block of code that results in a value
+* Invoke/Call: run the function
+
+## 4.18 Let's Build A Module
+
+## 4.19 Javascript Aside: Objects and Object Literals
+* Name/value pair: a name which maps to a value
+* Object: a collection of name/value pairs
+* Object literal: name/value paris separated by commas and surrounded by curly braces
+
+## 4.20 Javascript Aside: Prototypal Inhertance and Function Constructors
+* Inheritance: one object gets access to the properties and methods of another object
