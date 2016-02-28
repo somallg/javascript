@@ -146,3 +146,12 @@
 
 ## 5.41 Inheriting from the Event Emitter Part 3
 * exports class
+
+# Section 6. Asynchronous Code, libuv, The Event Loop, Streams, Files and more...
+
+## 6.42 Javascript Aside: Javascript is Synchronous
+* Asynchronous: more than one process running simultaneously
+    * Node does things asynchronously. V8 does not
+* Synchronous: one process executing at a time
+    * Javascript is synchronous, i.e one line of code executing at a time
+    
