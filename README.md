@@ -109,3 +109,10 @@
 ## 4.29 Modules and ES6
 
 ## 4.30 Web Server Checklist
+
+# Section 5. Events and the Event Emitter
+
+## 5.31 Conceptual Aside: Events
+* Event: something that has happened in our app that we can respond to
+* System Events (C++ Core, libuv): events from computer system
+* Custom Events (Javscript core, Event emitter) 
