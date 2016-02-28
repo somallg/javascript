@@ -155,3 +155,5 @@
 * Synchronous: one process executing at a time
     * Javascript is synchronous, i.e one line of code executing at a time
     
+## 6.43 Conceptual Aside: Callbacks
+* Callback: a function passed to some other function, which we assume will be invoked at some point
