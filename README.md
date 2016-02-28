@@ -217,3 +217,10 @@
 * The ability to communicate over the Internet
 * The ability to accept requests and send responses (in the standard format)
 * ~~A way to deal with work that takes a long time~~
+
+## Section 7. HTTP and being a Web Server
+
+## 7.55 Conceptual Aside: TCP/IP
+* Protocol: a set of rules two sides agree on to use when communicating
+    * Both client and server are programmed to understand and use that particular set of rules
+*  Client-Server Model for Computing: request/response (standard format)
