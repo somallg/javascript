@@ -171,4 +171,6 @@
 * Binary Data: data stored in binary (sets of 1s and 0s)
 * Character Set: a representation of characters as numbers
     * Unicode and ASCII are character sets
-* Character Encoding: how many bit characters are stored in binary 
+* Character Encoding: how many bit characters are stored in binary
+
+## 6.47 Buffers
