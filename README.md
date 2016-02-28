@@ -136,4 +136,5 @@
     * babeljs.io
 * Template literal: a way to concatenate strings in Javascript (ES6)
     * Easier to work with than a bunch of strings concatenated with '+'
-* 
+    
+## 5.38 Javascript Aside: .call and .apply

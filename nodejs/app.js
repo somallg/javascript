@@ -1,9 +1,14 @@
 'use strict';
 
-var name = 'John Doe';
+var obj = {
+	name: 'John Doe',
+	greet: function () {
+		console.log(`Hello ${ this.name }`);
+	}
+}
 
-var greet = 'Hello ' + name;
-var greet2 = `Hello ${ name }`;
+obj.greet();
 
-console.log(greet);
-console.log(greet2);
+obj.greet.call({ name: 'Jane Doe' });
+
+obj.greet.apply({ name: 'Jane Doe' });
