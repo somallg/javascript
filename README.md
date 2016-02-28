@@ -99,3 +99,7 @@
 * Revealing Module Pattern: exposing only the properties and methods you want via an returned object
     * Very common and clean way to structure and protect code within modules
     
+## 4.26 exports vs module.exports
+* Mutate: to change something
+    * Adding a method or property to an object means you've mutated the object
+* Just use **module.exports**
