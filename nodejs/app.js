@@ -1,24 +1,22 @@
 'use strict';
 
-var EventEmitter = require('events');
-var util = require('util');
-
-function Greetr() {
-	EventEmitter.call(this);// ensure this have every property of Event Emitter
-	this.greeting = 'Hello world';
+class Person {
+	constructor(firstname, lastname) {
+		this.firstname = firstname;
+		this.lastname = lastname;
+	}
+	
+	greet() {
+		console.log(`Hello ${this.firstname} ${this.lastname}`);
+	}
 }
 
-util.inherits(Greetr, EventEmitter);
+var john = new Person('John', 'Doe');
+john.greet();
 
-Greetr.prototype.greet = function (data) {
-	console.log(this.greeting + ': ' + data);
-	this.emit('greet', data);
-}
+var jane = new Person('Jane', 'Doe');
+jane.greet();
 
-var greeter1 = new Greetr();
-
-greeter1.on('greet', function (data) {
-	console.log('Someone greeted!: ' + data);
-});
-
-greeter1.greet('Tony');
+console.log(john.__proto__);
+console.log(jane.__proto__);
+console.log(john.__proto__ === jane.__proto__);

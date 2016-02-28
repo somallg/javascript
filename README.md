@@ -140,3 +140,6 @@
 ## 5.38 Javascript Aside: .call and .apply
 
 ## 5.39 Inheriting from the Event Emitter Part 2
+
+## 5.40 Javascript Aside: ES6 Classes
+* Syntactic sugar: a feature that only changes how you type something, but nothing changes under the hood
