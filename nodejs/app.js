@@ -1,10 +1,9 @@
 'use strict';
 
-var buf = new Buffer('Hello', 'utf8');
-console.log(buf);
-console.log(buf.toString());
-console.log(buf.toJSON());
-console.log(buf[2]);
+var buffer = new ArrayBuffer(8); // from V8 engine
+var view = new Int32Array(buffer);
 
-buf.write('wo');
-console.log(buf.toString());
+view[0] = 5;
+view[1] = 15;
+view[2] = 30; // no error, but no storage for 30
+console.log(view);
