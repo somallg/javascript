@@ -123,3 +123,6 @@
 * Event listener: the code that responds to an event
     * In Javascript's case, the listener will be a function
  
+## 5.33 The Node Event Emitter Part 2
+* Magic string: a string that has some special meaning in our code
+* 
