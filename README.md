@@ -109,13 +109,19 @@
 ## 4.29 Modules and ES6
 
 ## 4.30 Web Server Checklist
+* ~~Better ways to organize our code into reusable pieces~~
+* Ways to deal with files
+* Ways to deal with databases
+* The ability to communicate over the Internet
+* The ability to accept requests and send responses (in the standard format)
+* A way to deal with work that takes a long time
 
 # Section 5. Events and the Event Emitter
 
 ## 5.31 Conceptual Aside: Events
 * Event: something that has happened in our app that we can respond to
 * System Events (C++ Core, libuv): events from computer system
-* Custom Events (Javscript core, Event emitter) 
+* Custom Events (Javascript core, Event emitter) 
 
 ## 5.32 Javascript Aside: Object Properties, First Class Function, and Arrays
 
@@ -203,3 +209,11 @@
 
 ## 6.53 Pipes
 * Method chaining: a method returns an object so we can keep calling more methods
+
+## 6.54 Web Server Checklist
+* ~~Better ways to organize our code into reusable pieces~~
+* ~~Ways to deal with files~~
+* Ways to deal with databases
+* The ability to communicate over the Internet
+* The ability to accept requests and send responses (in the standard format)
+* ~~A way to deal with work that takes a long time~~
