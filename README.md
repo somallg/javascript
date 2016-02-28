@@ -128,3 +128,5 @@
 
 ## 5.35 Javascript Aside: Object.create and Prototypes
 * Object.create - simple, clean, clear way to setup a sequence of object, object that inherits from one another on prototype chain
+
+## 5.36 Inheriting from the Event Emitter
