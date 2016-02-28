@@ -284,7 +284,9 @@
 * MAJOR.MINOR.PATCH (1.7.2)
 * Increment PATCH: some bugs were fixed. Your code will work fine
 * Increment MINOR: some new features were added. Your code will work fine
-* Change MAJOR: big changes. Your code will break (maybe) 
+* Change MAJOR: big changes. Your code will break (maybe)
+
+## 8.68 npm and the npm registry: Other People's Code
 
 ## 8.70 npm Global Installation
 * https://docs.npmjs.com/getting-started/fixing-npm-permissions
