@@ -160,3 +160,9 @@
 
 ## 6.44 libuv, The Event Loop, and Non-Blocking Asynchronous Execution
 * Non-blocking: doing other things without stopping your programming from running
+
+## 6.45 Conceptual Aside: Streams and Buffers
+* Buffer: a temporary holding spot for data being moved from one place to another
+    * Intentially limited in size
+* Stream: a sequence of data made available over time
+    * Pieces of data that eventually combine into a whole
