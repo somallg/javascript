@@ -130,3 +130,10 @@
 * Object.create - simple, clean, clear way to setup a sequence of object, object that inherits from one another on prototype chain
 
 ## 5.36 Inheriting from the Event Emitter
+
+## 5.37 Javascript Aside: Node, ES6 and Template Literals
+*  ES6 (ECMAScript 2015) - new standard of Javascript, new features, managing, writing Javascript code easier
+    * babeljs.io
+* Template literal: a way to concatenate strings in Javascript (ES6)
+    * Easier to work with than a bunch of strings concatenated with '+'
+* 
