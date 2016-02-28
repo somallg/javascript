@@ -105,3 +105,6 @@
 * Just use **module.exports**
 
 ## 4.27 Requiring Native (Core) Modules
+
+## 4.28 Modules and ES6
+
