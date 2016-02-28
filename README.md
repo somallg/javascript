@@ -157,3 +157,6 @@
     
 ## 6.43 Conceptual Aside: Callbacks
 * Callback: a function passed to some other function, which we assume will be invoked at some point
+
+## 6.44 libuv, The Event Loop, and Non-Blocking Asynchronous Execution
+* Non-blocking: doing other things without stopping your programming from running
