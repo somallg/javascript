@@ -253,6 +253,11 @@
 * Endpoint: one url in a web API
     * Sometimes that endpoint (URL) does multiple thing by making choices based on the HTTP request headers
 
+## 7.63 Outputting JSON
+* Serialize: translating an object into a format that can be stored or transferred
+    * JSON, CSV, XML, and other are popular.
+    * 'Deserialize' is the opposite (converting the format back into an object)
+
 ## 8.70 npm Global Installation
 * https://docs.npmjs.com/getting-started/fixing-npm-permissions
 
