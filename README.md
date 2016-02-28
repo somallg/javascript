@@ -116,3 +116,6 @@
 * Event: something that has happened in our app that we can respond to
 * System Events (C++ Core, libuv): events from computer system
 * Custom Events (Javscript core, Event emitter) 
+
+## 5.32 Javascript Aside: Object Properties, First Class Function, and Arrays
+ 

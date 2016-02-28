@@ -1,8 +1,29 @@
 'use strict';
 
-var util = require('util');
+var obj = {
+	greet: 'Hello'
+};
 
-var name = 'Tony';
-var greeting = util.format('Hello, %s, %s', name, 'test');
+console.log(obj.greet);
+console.log(obj['greet']);
 
-util.log(greeting);
+var prop = 'greet';
+console.log(obj[prop]);
+
+var arr = [];
+
+arr.push(function () {
+	console.log('Hello worl 1');
+});
+
+arr.push(function () {
+	console.log('Hello worl 2');
+});
+
+arr.push(function () {
+	console.log('Hello worl 3');
+});
+
+arr.forEach(function (item) {
+	item();
+});
