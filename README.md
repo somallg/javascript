@@ -200,3 +200,6 @@
 ## 6.52 Conceptual Aside: Pipes
 * Pipes: connecting two streams by writing to one stream what is being read from another
     * In Node you pipe from a Readable stream to a Writable stream 
+
+## 6.53 Pipes
+* Method chaining: a method returns an object so we can keep calling more methods
