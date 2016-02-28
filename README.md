@@ -262,6 +262,14 @@
 * Routing: mapping http requests to content
     * Whether actual files that exist on the server, or not
 
+## 7.65 Web Server Checklist
+* ~~Better ways to organize our code into reusable pieces~~
+* ~~Ways to deal with files~~
+* Ways to deal with databases
+* ~~The ability to communicate over the Internet~~
+* ~~The ability to accept requests and send responses (in the standard format)~~
+* ~~A way to deal with work that takes a long time~~
+
 ## 8.70 npm Global Installation
 * https://docs.npmjs.com/getting-started/fixing-npm-permissions
 
