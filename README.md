@@ -258,6 +258,10 @@
     * JSON, CSV, XML, and other are popular.
     * 'Deserialize' is the opposite (converting the format back into an object)
 
+## 7.64 Routing
+* Routing: mapping http requests to content
+    * Whether actual files that exist on the server, or not
+
 ## 8.70 npm Global Installation
 * https://docs.npmjs.com/getting-started/fixing-npm-permissions
 
