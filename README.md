@@ -89,22 +89,23 @@
 * **module.exports** is what the require function *returns*
 * This works because **your code is actually wrapped is a function** that is given these things as function parameters
 
-## 4.23 Javascript Aside: JSON
+## 4.24 Javascript Aside: JSON
 * JSON: "Javascript object notation" - a standard for structuring data that is inspired by javascript object literals
 
-## 4.24 More on require
+## 4.25 More on require
 * Use wisely to structure project
 
-## 4.25 Module Patterns
+## 4.26 Module Patterns
 * Revealing Module Pattern: exposing only the properties and methods you want via an returned object
     * Very common and clean way to structure and protect code within modules
     
-## 4.26 exports vs module.exports
+## 4.27 exports vs module.exports
 * Mutate: to change something
     * Adding a method or property to an object means you've mutated the object
 * Just use **module.exports**
 
-## 4.27 Requiring Native (Core) Modules
+## 4.28 Requiring Native (Core) Modules
 
-## 4.28 Modules and ES6
+## 4.29 Modules and ES6
 
+## 4.30 Web Server Checklist
