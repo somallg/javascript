@@ -1,9 +1,20 @@
 'use strict';
 
-var buffer = new ArrayBuffer(8); // from V8 engine
-var view = new Int32Array(buffer);
+function greet(callback) {
+	console.log('Hello!');
+	var data = {
+		name: 'John Doe'	
+	};
+	callback(data);
+}
 
-view[0] = 5;
-view[1] = 15;
-view[2] = 30; // no error, but no storage for 30
-console.log(view);
+greet(function (data) {
+	console.log('The callback was invoked');
+	console.log(data);
+});
+
+
+greet(function (data) {
+	console.log('Another callback was invoked');
+	console.log(data.name);
+});

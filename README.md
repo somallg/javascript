@@ -178,3 +178,6 @@
 ## 6.48 ES6 Typed Arrays
 * Byte: 8 bits (00101100)
 * ES6 does have way to dealing with raw binary data
+
+## 6.49 Javascript Aside: Callbacks
+* Callback: a function passed to some other function, which we assume will be invoked at some point
