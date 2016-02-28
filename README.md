@@ -123,6 +123,8 @@
 * Event listener: the code that responds to an event
     * In Javascript's case, the listener will be a function
  
-## 5.33 The Node Event Emitter Part 2
+## 5.34 The Node Event Emitter Part 2
 * Magic string: a string that has some special meaning in our code
-* 
+
+## 5.35 Javascript Aside: Object.create and Prototypes
+* Object.create - simple, clean, clear way to setup a sequence of object, object that inherits from one another on prototype chain
