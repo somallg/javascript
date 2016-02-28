@@ -1,20 +1,13 @@
 'use strict';
 
-function greet(callback) {
-	console.log('Hello!');
-	var data = {
-		name: 'John Doe'	
-	};
-	callback(data);
-}
+var fs = require('fs');
 
-greet(function (data) {
-	console.log('The callback was invoked');
-	console.log(data);
+var greet = fs.readFileSync(__dirname + '/greet.txt', 'utf8');
+
+console.log('Sync: ' + greet);
+
+var greet2 = fs.readFile(__dirname + '/greet.txt', 'utf8', function (err, data) {
+	console.log('Async: ' + data);
 });
 
-
-greet(function (data) {
-	console.log('Another callback was invoked');
-	console.log(data.name);
-});
+console.log('Done!');

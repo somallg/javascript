@@ -181,3 +181,8 @@
 
 ## 6.49 Javascript Aside: Callbacks
 * Callback: a function passed to some other function, which we assume will be invoked at some point
+
+## 6.50 Files and fs
+* Error-First Callback: callbacks take an error object as their first parameter
+    * *null* if no error, other will contain an object defining the error
+* Always lean to asynchronous approach
