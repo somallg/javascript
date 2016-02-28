@@ -1,14 +1,24 @@
 'use strict';
 
-var obj = {
-	name: 'John Doe',
-	greet: function () {
-		console.log(`Hello ${ this.name }`);
-	}
+var EventEmitter = require('events');
+var util = require('util');
+
+function Greetr() {
+	EventEmitter.call(this);// ensure this have every property of Event Emitter
+	this.greeting = 'Hello world';
 }
 
-obj.greet();
+util.inherits(Greetr, EventEmitter);
 
-obj.greet.call({ name: 'Jane Doe' });
+Greetr.prototype.greet = function (data) {
+	console.log(this.greeting + ': ' + data);
+	this.emit('greet', data);
+}
 
-obj.greet.apply({ name: 'Jane Doe' });
+var greeter1 = new Greetr();
+
+greeter1.on('greet', function (data) {
+	console.log('Someone greeted!: ' + data);
+});
+
+greeter1.greet('Tony');

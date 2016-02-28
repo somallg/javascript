@@ -138,3 +138,5 @@
     * Easier to work with than a bunch of strings concatenated with '+'
     
 ## 5.38 Javascript Aside: .call and .apply
+
+## 5.39 Inheriting from the Event Emitter Part 2
