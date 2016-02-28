@@ -228,3 +228,11 @@
 ## 7.56 Conceptual Aside: Addresses and Ports
 * Port: once a computer receives a packet, how it knows what program to send it to
     * When a program is setup on the operating system to receive packets from a particular port, it is said that the program is 'listening' to that port
+    
+## 7.57 Conceptual Aside: HTTP
+* HTTP: a set of rules (and a format) for data being transferred on the web
+    * Stands for 'HyperText Transfer Protocol'. It's a format (of various) defining data being transferred via TCP/IP
+
+* MIME type: a standard for specifying the type of data being sent
+    * Stands for 'Multipurpose Internet Mail Extensions'. Examples: application/json, text/html, image/jpeg
+        
