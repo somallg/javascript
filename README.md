@@ -224,3 +224,7 @@
 * Protocol: a set of rules two sides agree on to use when communicating
     * Both client and server are programmed to understand and use that particular set of rules
 *  Client-Server Model for Computing: request/response (standard format)
+
+## 7.56 Conceptual Aside: Addresses and Ports
+* Port: once a computer receives a packet, how it knows what program to send it to
+    * When a program is setup on the operating system to receive packets from a particular port, it is said that the program is 'listening' to that port
