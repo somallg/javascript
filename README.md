@@ -118,4 +118,8 @@
 * Custom Events (Javscript core, Event emitter) 
 
 ## 5.32 Javascript Aside: Object Properties, First Class Function, and Arrays
+
+## 5.33 The Node Event Emitter Part 1
+* Event listener: the code that responds to an event
+    * In Javascript's case, the listener will be a function
  

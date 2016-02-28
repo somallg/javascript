@@ -1,29 +1,16 @@
 'use strict';
 
-var obj = {
-	greet: 'Hello'
-};
+var Emitter = require('./emitter');
 
-console.log(obj.greet);
-console.log(obj['greet']);
+var emtr = new Emitter();
 
-var prop = 'greet';
-console.log(obj[prop]);
-
-var arr = [];
-
-arr.push(function () {
-	console.log('Hello worl 1');
+emtr.on('greet', function () {
+	console.log('Somewhere, someone said hello.');
 });
 
-arr.push(function () {
-	console.log('Hello worl 2');
+emtr.on('greet', function () {
+	console.log('Another greeting');
 });
 
-arr.push(function () {
-	console.log('Hello worl 3');
-});
-
-arr.forEach(function (item) {
-	item();
-});
+console.log('Hello!');
+emtr.emit('greet');
