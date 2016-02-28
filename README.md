@@ -143,3 +143,6 @@
 
 ## 5.40 Javascript Aside: ES6 Classes
 * Syntactic sugar: a feature that only changes how you type something, but nothing changes under the hood
+
+## 5.41 Inheriting from the Event Emitter Part 3
+* exports class
