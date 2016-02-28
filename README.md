@@ -243,6 +243,9 @@
 ## 7.60 Outputting HTML and Templates
 * Template: text designed to be the basis for final text or content after being processed
 
+## 7.61 Streams and Performance
+* Rather than pulling the entier file into a buffer then sending it, we send a chunk at a time buffer stay small => app faster, responsive, performance
+
 ## 8.70 npm Global Installation
 * https://docs.npmjs.com/getting-started/fixing-npm-permissions
 
