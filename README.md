@@ -240,8 +240,8 @@
 
 ## 7.59 Let's Build a Web Server in Node
 
-
-
+## 7.60 Outputting HTML and Templates
+* Template: text designed to be the basis for final text or content after being processed
 
 ## 8.70 npm Global Installation
 * https://docs.npmjs.com/getting-started/fixing-npm-permissions
