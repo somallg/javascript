@@ -197,3 +197,6 @@
 * Custom Stream => Stream.Readable.prototype (read) => Stream.prototype -> EventEmitter.prototype (on, emit)
 * Readable/Writable: not only physical readable/writable, but from Node's perspective
 
+## 6.52 Conceptual Aside: Pipes
+* Pipes: connecting two streams by writing to one stream what is being read from another
+    * In Node you pipe from a Readable stream to a Writable stream 
