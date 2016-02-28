@@ -278,6 +278,14 @@
     * Deals with what version you have or need, and manages **dependencies**
 * Dependency: code that another set of code depends on to function 
 
+## 8.67 Conceptual Aside: Semantic Version (semver)
+* Versioning: sepcifying what version of a set of code this is
+    * So others can track if a new version has come out
+* MAJOR.MINOR.PATCH (1.7.2)
+* Increment PATCH: some bugs were fixed. Your code will work fine
+* Increment MINOR: some new features were added. Your code will work fine
+* Change MAJOR: big changes. Your code will break (maybe) 
+
 ## 8.70 npm Global Installation
 * https://docs.npmjs.com/getting-started/fixing-npm-permissions
 
