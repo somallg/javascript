@@ -235,4 +235,5 @@
 
 * MIME type: a standard for specifying the type of data being sent
     * Stands for 'Multipurpose Internet Mail Extensions'. Examples: application/json, text/html, image/jpeg
-        
+
+## 7.58 http_parser
