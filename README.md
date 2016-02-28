@@ -103,3 +103,5 @@
 * Mutate: to change something
     * Adding a method or property to an object means you've mutated the object
 * Just use **module.exports**
+
+## 4.27 Requiring Native (Core) Modules

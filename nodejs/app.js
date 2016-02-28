@@ -1,4 +1,8 @@
 'use strict';
 
-var greet = require('./greet1b');
-greet.greet();
+var util = require('util');
+
+var name = 'Tony';
+var greeting = util.format('Hello, %s, %s', name, 'test');
+
+util.log(greeting);
