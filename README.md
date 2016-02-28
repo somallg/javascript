@@ -270,6 +270,14 @@
 * ~~The ability to accept requests and send responses (in the standard format)~~
 * ~~A way to deal with work that takes a long time~~
 
+# Section 8. NPM: the Node Package Manager
+
+## 8.66 Conceptual Aside: Packages and Package Manager
+* Package: code managed and maintained with a package management system
+* Package Management System: software that automates installing and updating packages
+    * Deals with what version you have or need, and manages **dependencies**
+* Dependency: code that another set of code depends on to function 
+
 ## 8.70 npm Global Installation
 * https://docs.npmjs.com/getting-started/fixing-npm-permissions
 
