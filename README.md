@@ -246,6 +246,13 @@
 ## 7.61 Streams and Performance
 * Rather than pulling the entier file into a buffer then sending it, we send a chunk at a time buffer stay small => app faster, responsive, performance
 
+## 7.62 Conceptual Aside: APIs and Endpoints
+* API: a set of tools for building a software application
+    * Stands for 'Application Programming Interface'. On the web the tools are usually made available via a set of URLs which accept and send only data via HTTP and TPC/IP
+    
+* Endpoint: one url in a web API
+    * Sometimes that endpoint (URL) does multiple thing by making choices based on the HTTP request headers
+
 ## 8.70 npm Global Installation
 * https://docs.npmjs.com/getting-started/fixing-npm-permissions
 
