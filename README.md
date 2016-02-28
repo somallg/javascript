@@ -186,3 +186,14 @@
 * Error-First Callback: callbacks take an error object as their first parameter
     * *null* if no error, other will contain an object defining the error
 * Always lean to asynchronous approach
+
+## 6.51 Streams
+* Stream: sequence of pieces of data (broken up into chunk)
+* Chunk: a piece of data being sent through a stream
+* Streams are EventEmitter
+* Abstract (Base) Class: a type of constructor you never work directly with, but inherit from
+    * Create new custom objects which inherit from the abstract base class
+    
+* Custom Stream => Stream.Readable.prototype (read) => Stream.prototype -> EventEmitter.prototype (on, emit)
+* Readable/Writable: not only physical readable/writable, but from Node's perspective
+
