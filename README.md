@@ -166,3 +166,9 @@
     * Intentially limited in size
 * Stream: a sequence of data made available over time
     * Pieces of data that eventually combine into a whole
+
+## 6.46 Conceptual Aside: Binary Data, Character Sets, and Encodings
+* Binary Data: data stored in binary (sets of 1s and 0s)
+* Character Set: a representation of characters as numbers
+    * Unicode and ASCII are character sets
+* Character Encoding: how many bit characters are stored in binary 
