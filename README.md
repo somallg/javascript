@@ -96,4 +96,6 @@
 * Use wisely to structure project
 
 ## 4.25 Module Patterns
-* 
+* Revealing Module Pattern: exposing only the properties and methods you want via an returned object
+    * Very common and clean way to structure and protect code within modules
+    
