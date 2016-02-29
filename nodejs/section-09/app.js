@@ -23,7 +23,8 @@ app.get('/', function (req, res) {
    res.render('index');
 });
 
-app.get('/person/:id', function (req, res) {
+app.get('/api/person/:id', function (req, res) {
+    // get the data from db
    res.render('person', {
        ID: req.params.id,
        Qstr: req.query.qstr
@@ -36,10 +37,15 @@ app.post('/person', urlencodedParser, function (req, res) {
     console.log(req.body.lastname);
 });
 
-app.post('/personjson', jsonParser, function (req, res) {
-    res.send('Thank you for the JSON data');
-    console.log(req.body.firstname);
-    console.log(req.body.lastname);
+app.post('/api/person', jsonParser, function (req, res) {
+    //res.send('Thank you for the JSON data');
+    //console.log(req.body.firstname);
+    //console.log(req.body.lastname);
+    // save to the db
+});
+
+app.delete('/api/person/:id', function (req, res) {
+    // delete from db
 });
 
 app.get('/api', function (req, res) {

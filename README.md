@@ -272,3 +272,8 @@
 * `app.set('view engine', 'jade')`
 
 ## 9.77 Querystring and Post Parameters
+
+## 9.78 RESTfull APIs and JSON
+* REST: an architectural style for building APIs
+    * Stands for 'Representational State Transfer'. We decide that HTTP verbs and URLs mean something
+    
