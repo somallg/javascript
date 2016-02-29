@@ -288,6 +288,8 @@
 
 ## 8.68 npm and the npm registry: Other People's Code
 
+## 8.69 init, nodemon and package.json
+
 ## 8.70 npm Global Installation
 * https://docs.npmjs.com/getting-started/fixing-npm-permissions
 
