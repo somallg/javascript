@@ -266,3 +266,7 @@
     * In the case of Express, sitting between the request and the response
 * Static: not dynamic
     * In other words, not processed by code in any way. For example HTML, CSS, and image files are 'static' files
+
+## 9.76 Templates and Template Engines
+* Install template engine
+* `app.set('view engine', 'jade')`
