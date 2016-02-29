@@ -321,3 +321,5 @@
     * Document Object Model. Browers give the JS engine the ability to manipulate the DOM
     
 ## 11.87 AngularJS: Managing the Client Part 2
+
+## 11.88 AngularJS: Managing the Client Part 3
