@@ -292,3 +292,24 @@
 * NoSQL: a variety of technologies that are alternatives to tables and SQL
     * One of those types is a **document** database. MongoDB is one of those
 * Sacrifire hard drive for greater flexibility
+
+## 10.83 MongoDB and Mongoose
+
+## 10.84 Web Server Checklist
+* ~~Better ways to organize our code into reusable pieces~~
+* ~~Ways to deal with files~~
+* ~~Ways to deal with databases~~
+* ~~The ability to communicate over the Internet~~
+* ~~The ability to accept requests and send responses (in the standard format)~~
+* ~~A way to deal with work that takes a long time~~
+
+# Section 11. The MEAN stack
+
+## 11.85 MongoDB, Express, AngularJS, and NodeJS
+* Stack: the combination of all technologies used to build a pieced of software
+    * You database system, your server side code, your client side code, and everything else
+* What you choose to build software
+* **M**ongoDB: stores your data in documents that look a lot like JSON and JavaScript object literal notation
+* **E**xpress: JavaScript framework that makes thing like routing, writing APIS, and working with HTTP easier
+* **A**ngularJS: JavaScript framework for managing code and UI in the browser, removing a lot of manual work
+* **N**odeJS: JavaScript on the server. Handle HTTP requests and responses and lots more

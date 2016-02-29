@@ -3,7 +3,46 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
-var mysql = require('mysql');
+var mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:27017/addressbook');
+
+var Schema = mongoose.Schema;
+
+var personSchema = new Schema({
+    firstname: String,
+    lastname: String,
+    address: String
+});
+
+var Person = mongoose.model('Person', personSchema);
+
+var john = new Person({
+    firstname: 'John',
+    lastname: 'Doe',
+    address: '555 Main Street',
+    greet: function () {
+        console.log('abc');
+    }
+});
+
+john.save(function (err) {
+    if (err) throw err;
+    
+    console.log('person saved');
+});
+
+var jane = new Person({
+    firstname: 'Jane',
+    lastname: 'Doe',
+    address: '555 Main Street'
+});
+
+jane.save(function(err) {
+   if (err) throw err;
+   
+   console.log('person saved'); 
+});
 
 var port = process.env.PORT || 3000;
 
@@ -25,16 +64,10 @@ app.get('/', function (req, res) {
 });
 
 app.get('/api/test', function (req, res) {
-       var con = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'test'
-    });
-    
-    con.query('SELECT * FROM users LIMIT 10', function (err, rows) {
+    Person.find({}, function (err, users) {
         if (err) throw err;
-        res.json(rows);
+        
+        res.json(users);
     });
 });
 
