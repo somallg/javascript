@@ -277,3 +277,5 @@
 * REST: an architectural style for building APIs
     * Stands for 'Representational State Transfer'. We decide that HTTP verbs and URLs mean something
     
+## 9.79 Structuring an App
+* express-generator
