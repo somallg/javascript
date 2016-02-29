@@ -239,3 +239,23 @@
 ## 7.58 http_parser
 
 ## 7.59 Let's Build a Web Server in Node
+
+
+
+
+## 8.70 npm Global Installation
+* https://docs.npmjs.com/getting-started/fixing-npm-permissions
+
+## 8.71 init, nodemon, and package.json Part 2
+
+## 8.72 Using Other People's Code
+
+# Section 9. Express
+
+## 9.73 Installing Express and Making it Easier to Build a Web Server
+* Environment variables: global variables specific to the environment (server) our code is living in
+    * Differents servers can have different variable settings, ad we can access those values in code
+
+* HTTP Method: specifies the type of action the request wishes to make
+    * GET, POST, DELETE, and others. Also called **verbs**
+    
