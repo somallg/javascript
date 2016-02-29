@@ -319,3 +319,5 @@
 * Browers also have JS engines embedded in them and give them access to extra features
 * DOM: the structure browsers use to store and manage web pages
     * Document Object Model. Browers give the JS engine the ability to manipulate the DOM
+    
+## 11.87 AngularJS: Managing the Client Part 2
