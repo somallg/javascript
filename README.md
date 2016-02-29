@@ -259,3 +259,5 @@
 * HTTP Method: specifies the type of action the request wishes to make
     * GET, POST, DELETE, and others. Also called **verbs**
     
+## 9.74 Routes
+* 
