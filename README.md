@@ -313,3 +313,9 @@
 * **E**xpress: JavaScript framework that makes thing like routing, writing APIS, and working with HTTP easier
 * **A**ngularJS: JavaScript framework for managing code and UI in the browser, removing a lot of manual work
 * **N**odeJS: JavaScript on the server. Handle HTTP requests and responses and lots more
+
+## 11.86 AngularJS: Managing the Client
+* Browers are written in C++
+* Browers also have JS engines embedded in them and give them access to extra features
+* DOM: the structure browsers use to store and manage web pages
+    * Document Object Model. Browers give the JS engine the ability to manipulate the DOM
