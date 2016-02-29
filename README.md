@@ -326,3 +326,8 @@
 
 ## 11.89 Conceptual Aside: Angular 1, Angular 2, React and more...
 * It's Just Javascript
+
+## 11.90 Working with The Full Stack (and being a Full Stack Developer) Part 1
+* Full Stack Developer: a developer who knows all the pieces of a software stack
+    * And thus can build software by themselves...
+* More useful
