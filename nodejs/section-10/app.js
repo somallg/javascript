@@ -34,7 +34,7 @@ app.get('/api/test', function (req, res) {
     
     con.query('SELECT * FROM users LIMIT 10', function (err, rows) {
         if (err) throw err;
-        res.json(rows[0]);
+        res.json(rows);
     });
 });
 

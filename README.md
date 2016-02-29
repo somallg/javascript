@@ -287,3 +287,8 @@
 * SQL
 
 ## 10.81 Node and MySql
+
+## 10.82 Conceptual Aside: NoSQL and Documents
+* NoSQL: a variety of technologies that are alternatives to tables and SQL
+    * One of those types is a **document** database. MongoDB is one of those
+* Sacrifire hard drive for greater flexibility
