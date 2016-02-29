@@ -279,3 +279,9 @@
     
 ## 9.79 Structuring an App
 * express-generator
+
+# Section 10. Javascript, JSON, and Databases
+
+## 10.80 Conceptual Aside: Relational Databases and SQL
+* Relational databases
+* SQL
