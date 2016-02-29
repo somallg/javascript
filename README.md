@@ -323,3 +323,6 @@
 ## 11.87 AngularJS: Managing the Client Part 2
 
 ## 11.88 AngularJS: Managing the Client Part 3
+
+## 11.89 Conceptual Aside: Angular 1, Angular 2, React and more...
+* It's Just Javascript
