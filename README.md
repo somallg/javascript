@@ -260,4 +260,9 @@
     * GET, POST, DELETE, and others. Also called **verbs**
     
 ## 9.74 Routes
-* 
+
+## 9.75 Static Files and Middleware
+* Middleware: code that sits between two layers of software
+    * In the case of Express, sitting between the request and the response
+* Static: not dynamic
+    * In other words, not processed by code in any way. For example HTML, CSS, and image files are 'static' files
