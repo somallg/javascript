@@ -270,3 +270,5 @@
 ## 9.76 Templates and Template Engines
 * Install template engine
 * `app.set('view engine', 'jade')`
+
+## 9.77 Querystring and Post Parameters
