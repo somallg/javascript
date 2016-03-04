@@ -1,31 +1,103 @@
-# Everything related to javascript technologies
+# Git 
 ====
 
-* AngularJS - Superheroic JavScript MVW Framework
-    * [Angular-Meteor](https://github.com/somallg/javascript/tree/angular-meteor)
-    * [AngularJS Tutorial Build a Gmail clone](https://github.com/somallg/javascript/tree/angularjs-tutorial-build-a-gmail-clone)
-    * [AngularJS official tutorital](https://github.com/somallg/javascript/tree/angularjs)
+# Section 1. Introduction
 
-* Ionic - Advanced HTML5 Hybrid Mobile App Framework
-    * [Ionic by example](https://github.com/somallg/javascript/tree/ionic-by-example)
+## 1.1 Course Introduction
 
-* Books & Courses
-    * [Javascript: The Good Parts](https://github.com/somallg/javascript/tree/javascript-the-good-parts)
-    * [NodeSchool](https://github.com/somallg/javascript/tree/nodeschool)
-    * [Secrets of the JavaScript Ninja](https://github.com/somallg/javascript/tree/secrets-of-the-javascript-ninja)
-    * [Understand JavaScript](https://github.com/somallg/javascript/tree/understand-javascript)
+## 1.2 Why Git?
+* What is Git?
+    * Distributed source control system
+        * Not required to be decentralized
+    * Massively scales
+    * Opensource
+    * Developed for Linux project requirements
+    * Most operations are local
+    * Very fast
+    * Active community
+    * Most popular DVCS, VCS
 
-* KeystoneJS - Node.js cms and web application platform built on Express and MongoDB
-    * [keystonejs](https://github.com/somallg/javascript/tree/keystonejs)
+## 1.3 Core Concepts
+* Repository contains files, history, config managaged by Git
+* Three States of Git
+    * Working directory
+    * Staging area - pre-commit holding area
+    * Commit - Git Repository (history)
+* Remote repository (GitHub)
+* Master branch
 
-* MEAN.JS - Full-Stack Javascript Using MongoDB, Expresss, AngularJS, and Node.js
-    * [meanjs](https://github.com/somallg/javascript/tree/meanjs)
+## 1.4 Going Command Line
+* Why Command Line?
+    * History
+    * New features
+    * Online help
+    * Power!
+    * Consistent
+        * Termnial on Mac/Linux
+        * Git Bash on Windows
 
-* MeteorJS - Open-source platform for building top-quality web apps in a fraction of the time
-    * [meteorjs](https://github.com/somallg/javascript/tree/meteorjs)
+# Section 2. Installation
 
-* RevealJS - The HTML Presentation Framework
-    * [revealjs](https://github.com/somallg/javascript/tree/revealjs)
+## 2.5 Installation Overview
+* Windows
+    * Git for windows (git-scm.com)
+* Mac OS X
+    * Yosemite or later, easy path: 'git version'
+* Git Commands will be the Same
 
-* Learn and Understand NodeJS
-    * [understand-nodejs](https://github.com/somallg/javascript/tree/understand-nodejs)
+## 2.6 Installing Git for Windows
+
+## 2.7 Git on Mac OS X
+* `git version`
+
+# Section 3. Basic Git Workflow with GitHub
+
+## 3.8 Welcome to GitHub
+
+## 3.9 Setup the Project Folder
+* `git init`
+
+## 3.10 Git Configuration (User Name and Email)
+* `git config --global user.name`
+* `git config --global user.email`
+* `git config --global --list`
+
+## 3.11 Copy the Repository from GitHub to Your Local Computer (git clone)
+* `git clone`
+* `git status`
+
+## 3.12 The First Commit
+* `git status`
+* `git add`
+* `git commit -m`
+
+## 3.13 Publishing Changes back to GitHub (puhs)
+* `git push origin master`
+
+## 3.14 Command Reference
+
+# Section 4. Conclusion
+
+## 4.15 Course Review and Conclusion
+* Review
+    * Git Introduction/Key Concepts
+    * GitHub Introduction
+        * Sign-up
+        * Created a Repository
+    * Basic Workflow
+        * Clone
+        * Create / Edit Files
+        * Staging Area
+        * Commit
+        * Pull & Push
+
+# Section 5. Updates and Errata
+
+## 5.16 Git Mac OS X Updates
+
+# Section 6. Bonus: Alternative Ways to Start a Git
+
+## 6.17 Create a New Repository Locally
+
+## 6.18 Add Git to an Existing Project
+* `git init`
