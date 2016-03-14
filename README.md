@@ -121,11 +121,11 @@
 ## 3.12 Quick Start, Part 1: Starting with GitHub and Project Setup
 
 ## 3.13 Quick Start, Part 2: Configuration, Clone and Git Basic Workflow
-`
+```
 $ git config --global user.name "Username"
 $ git config --global user.email "Email"
 $ git config --global --list
-`
+```
 ## 3.14 Quick Start Resources
 
 # Section 4. Text Editor Installation
@@ -157,51 +157,172 @@ $ git config --global --list
 * http://meettheipsums.com/
 * http://hipsum.co/
 
-`
+```
 $ git add
 $ git commit
 $ git pull origin master
 $ git push origin master
-`
-
+```
 ## 5.26 Tracked Files
-`
+```
 $ git commit -am "Commit"
 $ git ls-files # get tracked files
-`
+```
 ## 5.27 Editing Files
 
 ## 5.28 Recursive Add
-`
+```
 $ git add .
-`
-
+```
 ## 5.29 Backing Out Changes
-`
+```
 $ git reset HEAD <file>
 $ git checkout -- <file>
-`
+```
 ## 5.30 Renaming and Moving Files
-`
+```
 $ git mv
-`
+```
 ## 5.31 Deleting Files
-`
+```
 $ git rm <file>
-`
+```
 ## 5.32 History
-`
+```
 $ git log --oneline --graph --decorate
 $ git log -- <file>
 $ git log --follow -- <file> # show moving file
 $ git show <SHA-1>
-`
+```
 ## 5.33 Git Alias
-`
+```
 $ git config --global alias.hist "log --all --graph --decorate --oneline"
-`
+```
 ## 5.34 Ignoring Unwanted Files and Folders
+* Specific File: MyFile.ext
+* File Pattern: *.ext
+* Folder: my-folder/
 
 ## 5.35 Cleanup and Back to Origin (GitHub)
-
+```
+$ git pull origin master
+$ git push origin master
+```
 ## 5.36 Git Basics Resources
+
+# Section 6. Visual Merge/Diff Tool Installation
+
+## 6.37 Visual Merge / Diff Tool Installation Overview
+
+## 6.38 P4Merge Install on Windows
+
+## 6.39 P4Merge for Windows Git Configuration
+
+## 6.40 P4Merge for Mac Installation
+
+## 6.41 P4Merge for Mac Git Configuration
+```
+$ git config --global diff.tool p4merge
+$ git config --global difftool.p4merge.path "/opt/homebrew-cask/Caskroom/p4merge/2014.3-1007540/p4merge.app/Contents/MacOS/p4merge"
+$ git config --global difftool.prompt false
+
+$ git config --global merge.tool p4merge
+$ git config --global mergetool.p4merge.path "/opt/homebrew-cask/Caskroom/p4merge/2014.3-1007540/p4merge.app/Contents/MacOS/p4merge"
+$ git config --global mergetool.prompt false
+```
+## 6.42 Visual Merge / Diff Tool Resources
+
+# Section 7. Comparisons
+
+## 7.43 Git Repository Setup (for comparing examples)
+
+## 7.44 Comparing Working Directory and the Staging Area
+```
+$ git diff
+$ git difftool
+```
+## 7.45 Comparing Working Directory and Git Repository (Last Commit)
+```
+$ git diff HEAD
+$ git difftool HEAD
+```
+## 7.46 Comparing between the Staging Area and the Git Repository (Last Commit)
+```
+$ git diff --staged HEAD
+$ git difftool --staged HEAD
+```
+## 7.47 Limiting Comparsons to one File (or path)
+```
+$ git diff -- README.md
+$ git difftool -- README.md
+```
+## 7.48 Comparing Between Commits
+```
+$ git diff HEAD HEAD^
+$ git difftool HEAD HEAD^
+```
+## 7.49 Comparing Between Local and Remote Master Branches
+```
+$ git diff master origin/master
+$ git difftool master origin/master
+```
+## 7.50 Comparison Section Cleanup and Push back to GitHub
+```
+$ git pull
+$ git push origin master
+```
+
+# Section 8. Branching and Merging
+
+## 8.51 Branching Basics
+```
+$ git branch -a # -all
+$ git branch mynewbranch
+$ git checkout mynewbranch
+$ git branch -m mynewbranch newbranch # rename branch
+$ git branch -d newbranch # delete branch
+```
+## 8.52 Happy Path / Fast Forward Merges
+```
+$ git checkout -b title-change # create branch and checkout
+$ git diff master title-change
+$ git merge title-change
+$ git branch -d title-change # delete after merged
+```
+## 8.53 Happy Path / Disable Fast Forward Merges
+```
+$ git checkout -b add-copyright
+$ git branch
+$ git checkout master
+$ git merge add-copyright --no-ff
+$ git branch -d add-copyright
+```
+## 8.54 Automatic Merges
+```
+$ git checkout -b simple-changes
+$ git merge simple-changes -m "Merging changes from simple-changes branch"
+$ git branch -d simple-changes
+```
+## 8.55 Conflicting Merges and Resolution
+```
+$ git checkout -b realwork
+$ git checkout master
+$ git diff master realwork
+$ git merge realwork
+$ git mergetool
+```
+## 8.56 Section Cleanup and Push back to GitHub
+
+# Section 9. Rebasing
+
+## 9.1 Simple Rebase Example
+
+## 9.2 Setup for rebasing conflict
+
+## 9.3 Abort a Rebase
+
+## 9.4 Rebase Conflict and Resolution
+
+## 9.5 Pull with Rebase (GitHub)
+
+## 9.6 Section Cleanup and push to GitHub
