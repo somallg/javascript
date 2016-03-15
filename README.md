@@ -438,7 +438,12 @@ $ git push origin :v-0.8-alpha
 # Section 12. Bonus: Office Hour Sessions
 
 ## 12.76 Reset and Reflog (Office Hours, Session 1)
-
+```
+$ git reset HEAD^1
+$ git reflog
+$ git reset a91501a
+$ git reset HEAD@{1}
+```
 ## 12.77 Compare Branches via GitHub (Office Hours, Session 1)
 
 ## 12.78 Campare Branches via Command Line (Office Hours, Session 1)
