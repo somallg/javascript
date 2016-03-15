@@ -316,13 +316,143 @@ $ git mergetool
 # Section 9. Rebasing
 
 ## 9.1 Simple Rebase Example
-
+```
+$ git checkout -b myfeature
+$ git checkout master
+$ git checkout myfeature
+$ git rebase master
+$ git checkout master
+$ git diff master myfeature
+$ git merge myfeature
+$ git branch -d myfeature
+```
 ## 9.2 Setup for rebasing conflict
-
+```
+$ git checkout -b bigtrouble
+$ git checkout master
+```
 ## 9.3 Abort a Rebase
-
+```
+$ git difftool master bigtrouble
+$ git rebase master
+$ git rebase --abort
+$ git status
+```
 ## 9.4 Rebase Conflict and Resolution
-
+```
+$ git rebase master
+$ git mergetool
+$ git add <file>
+$ git rebase --continue
+$ git checkout master
+$ git merge bigtrouble
+```
 ## 9.5 Pull with Rebase (GitHub)
-
+```
+$ git fetch origin master
+$ git pull --rebase origin master
+```
 ## 9.6 Section Cleanup and push to GitHub
+```
+$ git branch -d bigtrouble
+$ git pull origin master
+$ git push origin master
+```
+
+# Section 10. Stashing
+
+## 10.63 Simple Stash Example
+```
+$ git stash
+$ git stash apply
+$ git stash drop
+```
+## 10.64 Stashing Untracked Files and Using Pop
+```
+$ git stash -u
+$ git stash pop # ~~ git stash apply && git stash drop
+$ git stash save <message>
+$ git stash pop
+```
+## 10.65 Managing Multple Stashes
+```
+$ git stash show stash@{1}
+$ git stash list
+$ git stash apply stash@{1}
+$ git stash drop stash@{1}
+$ git stash clear
+```
+## 10.66 Stashing into a Branch
+```
+$ git stash -u
+$ git stash branch newchanges
+$ git commit
+$ git checkout master
+$ git merge newchanges
+```
+## 10.67 Section Cleanup and push to GitHub
+```
+$ git pull origin master
+$ git push origin master
+```
+## 10.68 Stashing Section Resources
+
+# Section 11. Tagging
+
+## 11.69 Simple Tag Example / Lightweight Tags
+```
+$ git tag myTag
+$ git tag --list
+$ git show myTag
+$ git tag --delete myTag
+```
+## 11.70 Annotated Tags
+```
+$ git tag -a v-1.0
+```
+## 11.71 Comparing Tags
+```
+$ git tag -a v-1.1
+$ git commit --amend
+$ git tag -a v-1.2 -m "Release 1.2"
+$ git diff v-1.0 v-1.2
+```
+## 11.72 Tagging a Specific Commit
+```
+$ git tag -a v-0.9-beta 3d5ce4a
+$ git tag -a v-0.8-alpha 2e676a1
+```
+## 11.73 Updating Tags
+```
+$ git tag -a v-0.8-alpha -f d33fd89
+```
+## 11.74 Using Tags with GitHub
+```
+$ git push origin v-0.9-beta
+$ git push origin v-1.1
+$ git push origin master --tags
+$ git push origin :v-0.8-alpha
+```
+## 11.75 Tagging Section Resources
+
+# Section 12. Bonus: Office Hour Sessions
+
+## 12.76 Reset and Reflog (Office Hours, Session 1)
+
+## 12.77 Compare Branches via GitHub (Office Hours, Session 1)
+
+## 12.78 Campare Branches via Command Line (Office Hours, Session 1)
+
+## 12.79 Stash vs Branch (Office Hours, Session 1)
+
+## 12.80 Gitting Help (Office Hours, Session 1)
+
+## 12.81 Cherry Pick (Office Hours, Session 1)
+
+# Section 13. Updates and Errata
+
+## 13.1 Git Mac OS X Updates
+
+# Section 14. Bonus: Resources and Special Offers
+
+## 14.1 Bonus: Special Offers for Existing Students
