@@ -1,7 +1,6 @@
 # Modern React with Redux
-====
 
-# 1 - An Intro to React
+# Section 1 - An Intro to React
 
 ## 1.1 Introduction - Github Links for Project Files!
 * Email: ste.grinder@gmail.co
@@ -17,6 +16,7 @@
 * `npm install`
 
 ## 1.5 Project Setup
+* https://github.com/StephenGrider/ReduxSimpleStarter.git
 
 ## 1.6 A Taste of JSX
 
@@ -44,3 +44,17 @@
 ## 1.15 Class-Based Components
 * Functional components
 * Class components
+    * Internal records keeping
+    * `extends React.Component`
+    * `render()` method
+    
+## 1.16 Handling User Events
+* 2 steps
+    * Define Event Handler
+    * Pass the Event Handler to the element we want to monitor for events
+    
+## 1.17 Introduction to State
+* Plain javascript object used to record, react user events
+
+## 1.18 More on State
+* 
