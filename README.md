@@ -57,4 +57,34 @@
 * Plain javascript object used to record, react user events
 
 ## 1.18 More on State
+* Always use `this.setState()` to update State object
+
+## 1.19 Controlled Components
+* Input or field whose value are set by the state
+
+## 1.20 Breather and Review
+* Class
+* Arrow function
+* Import/Export
+* Class based components/Functional components
+* State object
+
+# Section 2. Ajax Requests with React
+
+## 2.21 Youtube Search Response
+* Downward dataflow: only the most parent component should responsible to fetching data
+
+## 2.22 Refactoring Functional Components to Class Components
+
+## 2.23 Props
+* Used to passing data from parent to child component
+* Function components: `props`
+* Class components: `this.props`
+
+## 2.24 Building Lists with Map
+
+## 2.25 List Item Keys
+* Used for React to update component efficiently
+
+## 2.26 Video List Items
 * 
