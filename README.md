@@ -87,4 +87,17 @@
 * Used for React to update component efficiently
 
 ## 2.26 Video List Items
-* 
+
+## 2.27 Detail Component and Template Strings
+
+## 2.28 Handling Null Props
+
+## 2.29 Video Selection
+
+## 2.30 Styling with CSS
+
+## 2.31 Searching for Videos
+
+## 2.32 Throttling Search Term Input
+
+## 2.33 React Wrapup
