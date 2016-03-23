@@ -113,3 +113,29 @@
 ## 3.36 More on Redux
 
 ## 3.37 Even More on Redux!
+
+# Section 4. Managing App State with Redux
+
+## 4.38 Reducers
+
+## 4.39 Containers - Connecting Redux to React
+
+## 4.40 Containers Continued
+
+## 4.41 Implementation of a Container Class
+
+## 4.42 Containers and Reducers Review
+
+## 4.43 Actions and Action Creators
+
+## 4.44 Binding Action Creators
+
+## 4.45 Creating an Action
+
+## 4.46 Consuming Actions in Reducers
+
+## 4.47 Consuming Actions in Reducers Continued
+
+## 4.48 Conditional Rendering
+
+## 4.49 Reducers and Actions Review
