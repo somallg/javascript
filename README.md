@@ -93,11 +93,23 @@
 ## 2.28 Handling Null Props
 
 ## 2.29 Video Selection
+* Passing function callback from the parent to the children
 
 ## 2.30 Styling with CSS
+* Component name should be same as CSS class name
 
-## 2.31 Searching for Videos
+## 2.31 Searching for Videos 
 
 ## 2.32 Throttling Search Term Input
 
 ## 2.33 React Wrapup
+
+# Section 3. Modeling Application State
+
+## 3.34 Foreword on Redux
+
+## 3.35 What is Redux?
+
+## 3.36 More on Redux
+
+## 3.37 Even More on Redux!
