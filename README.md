@@ -117,16 +117,26 @@
 # Section 4. Managing App State with Redux
 
 ## 4.38 Reducers
+* Reducers produce value of our state
 
 ## 4.39 Containers - Connecting Redux to React
+* Container is a React component that has a direct connection to the State managed by Redux
+* Also called React smart component
 
 ## 4.40 Containers Continued
+* In general, we want the most parent component that carrys a particular piece of state to be a container 
 
 ## 4.41 Implementation of a Container Class
+* 'react-reduct' the glue between React and Redux
+* `connect` take a function and a component
+* Whenever application state changes, our containers will be automatically re-rendered
 
 ## 4.42 Containers and Reducers Review
+* Redux provides application state, React provide the views to display that state
+* 
 
 ## 4.43 Actions and Action Creators
+* Action creators function that returns an action
 
 ## 4.44 Binding Action Creators
 
