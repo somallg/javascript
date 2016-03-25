@@ -1,3 +1,4 @@
+//noinspection JSUnresolvedVariable
 import React, { Component } from 'react';
 
 class SearchBar extends Component {
@@ -12,9 +13,8 @@ class SearchBar extends Component {
     render() {
         return (
             <div className="search-bar">
-                <input
-                    value={ this.state.term } 
-                    onChange={ event => this.onInputChange(event.target.value) } />
+                <input value={ this.state.term }
+                       onChange={ event => this.onInputChange(event.target.value) } />
             </div>
         );
     }
