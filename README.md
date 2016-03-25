@@ -127,7 +127,7 @@
 * In general, we want the most parent component that carrys a particular piece of state to be a container 
 
 ## 4.41 Implementation of a Container Class
-* 'react-reduct' the glue between React and Redux
+* 'react-redux' the glue between React and Redux
 * `connect` take a function and a component
 * Whenever application state changes, our containers will be automatically re-rendered
 
@@ -149,3 +149,6 @@
 ## 4.48 Conditional Rendering
 
 ## 4.49 Reducers and Actions Review
+* Redux is in charge of managing the application state
+* The application state is a single javascript object
+* Reducers are responsible of changing application state
