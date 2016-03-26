@@ -152,3 +152,114 @@
 * Redux is in charge of managing the application state
 * The application state is a single javascript object
 * Reducers are responsible of changing application state
+
+# Section 5. Intermediate Redux: Middleware
+
+## 5.50 App Overview and Planning
+1. Make Ajax request with Redux
+2. Draw chart
+3. State change significantly overtime
+
+## 5.51 Component Setup
+
+## 5.52 Controlled Components and Binding Context
+* Set value of input to the state of the component
+* Binding callback to the `this` of the component
+
+## 5.53 Form Elements in React
+* Prevent browser default behavior
+
+## 5.54 Working with API's
+
+## 5.55 Introduction to Middleware
+* Middleware is a function that takes an action, depends on the action type or payload, the middleware can choose to let action pass, manipulate, log it or stop it
+
+## 5.56 Ajax Requests with Axios
+
+## 5.57 Redux-Promise in Practice
+
+## 5.58 Redux-Promise Continued
+* Redux-Promise is a middleware
+* Look at payload property, if it's a promise, then stop the action entirely. Once the request finishes, dispatch another action of the same type but with payload of the result request
+
+## 5.59 Avoiding State Mutations in Reducers
+
+## 5.60 Building a List Container
+
+## 5.61 Mapping Props to a Render Helper
+
+## 5.62 Adding Sparkline Charts
+
+## 5.63 Making a Reusable Char Component
+
+## 5.64 Labeling of Units
+
+## 5.65 Google Maps Integration
+
+## 5.66 Google Maps Integration Continued
+
+## 5.67 Project Review
+1. Experience with Redux
+2. Middleware: Redux-Promise
+3. Reducer: avoid mutate `state` object, return a new object instead
+4. Addition libraries: SparkLines, GoogleMaps
+
+# Section 6. React Router + Redux Form
+
+## 6.68 App Overview and Goals
+
+## 6.69 Exploring the Posts Api
+
+## 6.70 Installing React Router
+
+## 6.71 React Router - What is it?
+
+## 6.72 Setting Up React Router
+
+## 6.73 Route Configuration
+
+## 6.74 Nesting of Routes
+
+## 6.75 IndexRoutes with React Router
+
+## 6.76 Back To Redux - Index Action
+
+## 6.77 Catching Data with Posts Reducer
+
+## 6.78 Catching Data with Posts Reducer Continued
+
+## 6.79 Fetching Data with Lifecycle Methods
+
+## 6.80 Fetching Data with Lifecycle Methods Contined
+
+## 6.81 Creating New Posts
+
+## 6.82 Navigation with the Link Component
+
+## 6.83 Forms and Form Submission
+
+## 6.84 More on Forms and Form Submission
+
+## 6.85 Passing Control to Redux Form
+
+## 6.86 CreatePost Action Creator
+
+## 6.87 Form Validation
+
+## 6.88 Form Validation
+
+## 6.89 Navigating on Submit
+
+## 6.90 Posts Index
+
+## 6.91 Dynamic Route Params
+
+## 6.92 Loading Data on Render
+
+## 6.93 Handling Null Props
+
+## 6.94 Delete Action Creator
+
+## 6.95 Navigate on Delete
+
+## 6.96 ReactRouter and ReduxForm Wrapup
