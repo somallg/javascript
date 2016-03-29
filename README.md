@@ -263,3 +263,4 @@
 ## 6.95 Navigate on Delete
 
 ## 6.96 ReactRouter and ReduxForm Wrapup
+* ReactRouter take over the process of determining what component to be rendered at a given time. It did this by taking a look at the current URL, and reference with our route
