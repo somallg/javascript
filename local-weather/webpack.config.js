@@ -16,7 +16,7 @@ module.exports = {
         loader: "url?limit=10000"
       },
       {
-        test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
+        test: /\.(ttf|eot|svg|ico)(\?[\s\S]+)?$/,
         loader: 'file'
       },
       { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports?jQuery=jquery' }
