@@ -1,5 +1,7 @@
 module.exports = {
   entry: [
+    'webpack-dev-server/client?http://0.0.0.0:3000', // WebpackDevServer host and port
+    'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
     './src/index.js'
   ],
   output: {
@@ -9,7 +11,7 @@ module.exports = {
   },
   module: {
     loaders: [
-      { exclude: /node_modules/, loader: 'babel' },
+      { exclude: /node_modules/, loaders: [ 'react-hot', 'babel' ] },
       { test: /\.scss$/, loaders: [ 'style', 'css', 'sass' ] },
       {
         test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
