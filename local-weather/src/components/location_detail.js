@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
 
-import { fetchLocation } from '../actions';
-
-const LocationDetail = ({ fetchLocation }) => {
-  console.log('render LocationDetail');
-  fetchLocation();
-  return <div></div>;
+export default ({ location }) => {
+  if (!location) {
+    return <div>Loading location...</div>
+  }
+  return (
+    <div>
+      <p>Location: {location.city}, {location.region}, {location.country}</p> 
+    </div>
+  )
 };
-
-export default connect(null, { fetchLocation })(LocationDetail);

@@ -1,65 +1,52 @@
-import _ from 'lodash';
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
 
-import { fetchLocation, fetchWeather} from '../actions';
-import LocationDetail from '../components/location_detail';
+import CurrentDate from './current_date';
 
-class WeatherDetail extends Component {
-  constructor(props) {
-    console.log('constructor', props);
-    super(props);
+const WEATHER_CLEAR = 'Clear';
+const WEATHER_CLOUDY = 'Cloudy';
 
-    this.state = {
-      temp: null,
-      unit: 'K'
-    };
-  }
-
-  componentWillMount() {
-    console.log('componentWillMount');
-    this.props.fetchLocation()
-      .then(() => {
-        return this.props.fetchWeather({
-          city: this.props.location.city,
-          country: this.props.location.country
-        });
-      })
-      .then(() => {
-        this.setState({
-          temp: Math.round(this.props.weather.main.temp)
-        });
-      })
-  }
-
-  onClick() {
-    const { temp, unit } = this.state;
-    this.setState({
-      temp: unit === 'K' ? Math.round(temp - 273.15) : Math.round(temp + 273.15),
-      unit: unit === 'K' ? 'C' : 'K'
-    });
-  }
-
-  render() {
-    console.log('render');
-    const { location, weather } = this.props;
-
-    if (_.isEmpty(weather)) {
-      return (
-        <div>
-          <p className="text-center">Loading...</p>
-        </div>
-      );
-    }
-
+export default ({ weather }) => {
+  console.log(weather);
+  if (!weather) {
     return (
-      <div>
-        <p className="text-right">Location: {location.city}, {location.country}</p>
-        <p className="text-right">Temperature: {this.state.temp}</p>
-        <a href="#" onClick={this.onClick.bind(this)}>{this.state.unit}</a>
-      </div>
+      <div>Loading weather...</div>
     );
   }
-}
 
-export default connect((state) => state, { fetchLocation, fetchWeather })(WeatherDetail);
+  let wiClassName = '';
+
+  switch (weather.weather[0].main) {
+    case WEATHER_CLEAR:
+      wiClassName = 'wi-day-sunny';
+      break;
+    case WEATHER_CLOUDY:
+      wiClassName = 'wi-day-cloudy-windy';
+      break;
+    default:
+      wiClassName = 'wi-cloud';
+  }
+
+  return (
+    <div>
+      <CurrentDate />
+      <p>Weather: {weather.weather[0].description}</p>
+      <hr/>
+      <div className="row">
+        <div className="col-md-6">
+          <div className="row">
+            <div className="col-xs-4">
+              <p><i className={`wi ${wiClassName} icon-lg`}></i></p>
+            </div>
+            <div className="col-xs-8">
+              <p className="text-lg">{weather.main.temp}</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-6">
+          <p>Humidity: {weather.main.humidity}</p>
+          <p>Pressure: {weather.main.pressure}</p>
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 import { FETCH_LOCATION, FETCH_WEATHER } from '../actions';
 
 const reducerCreater = (type) => {
-  return (state = {}, action) => {
+  return (state = null, action) => {
     switch (action.type) {
       case type:
         return action.payload.data;

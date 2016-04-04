@@ -1,5 +1,17 @@
 html {
   body {
     font-size: 24px;
+
+    .text-lg {
+      font-size: 2.5em;
+    }
+
+    .icon-lg {
+      font-size: 4em;
+    }
+
+    hr {
+      border-top: 1px solid #ddd;
+    }
   }
 }
