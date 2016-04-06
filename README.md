@@ -31,5 +31,4 @@
 
 * React.js
   * [Thinking in React](https://github.com/somallg/javascript/tree/thinking-in-react)
-  * [Modern React with Redux]
-    Redux(https://github.com/somallg/javascript/tree/react-redux)
+  * [Modern React with Redux](https://github.com/somallg/javascript/tree/react-redux)
