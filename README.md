@@ -81,3 +81,33 @@
 ## 3.31 Simulate Helper
 
 ## 3.32 Test Helper Review
+
+# Section 4. Higher Order Components
+
+## 4.33 What is a Higher Order Component?
+
+## 4.34 Connect and Provider
+
+## 4.35 Authentication HOC Overview
+
+## 4.36 Header Setup
+
+## 4.37 React Router Setup
+
+## 4.38 Authentication Reducer
+
+## 4.39 Action Creactor Hookup
+
+## 4.40 Authentication Higher Order Component
+
+## 4.41 HOC Scaffold Code
+
+## 4.42 Nesting Higher Order Components
+
+## 4.43 Accessing React Router on Context
+
+## 4.44 Class Level Properties
+
+## 4.45 Handling HOC Edge Cases
+
+## 4.46 Higher Order Components Review
