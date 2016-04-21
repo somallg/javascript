@@ -61,3 +61,23 @@
 ## 2.22 Spec Failures After Code Change
 
 ## 2.23 App Review
+
+# Section 3. Test Environment Setup
+
+## 3.24 Purpose of Chai and Mocha
+
+## 3.25 Test Helper From Scratch
+
+## 3.26 JSDom Setup
+
+## 3.27 More JSDom Setup
+
+## 3.28 TestUtils Library
+
+## 3.29 Defining RenderComponent
+
+## 3.30 Finishing RenderComponent Helper
+
+## 3.31 Simulate Helper
+
+## 3.32 Test Helper Review
